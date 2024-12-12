@@ -1,0 +1,18 @@
+{
+    "home": {
+        "text": "Home",
+        "description": "Full Stack Programmer"
+    },
+    "experience": {
+        "text": "Work experiences"
+    },
+    "project": {
+        "text": "Projects"
+    },
+    "skill": {
+        "text": "Skills"
+    },
+    "contact": {
+        "text": "Contact"
+    }
+}

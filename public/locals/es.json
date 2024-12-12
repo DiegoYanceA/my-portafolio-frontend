@@ -1,0 +1,18 @@
+{
+    "home": {
+        "text": "Inicio",
+        "description": "Programador Full Stack"
+    },
+    "experience": {
+        "text": "Experiencia laboral"
+    },
+    "project": {
+        "text": "Proyectos"
+    },
+    "skill": {
+        "text": "Habilidades"
+    },
+    "contact": {
+        "text": "Contacto"
+    }
+}

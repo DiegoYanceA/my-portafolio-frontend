@@ -1,0 +1,238 @@
+@use './consts' as ct;
+@use './colors' as cl;
+@use 'sass:map';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Variables de colores
+$themes: (
+  light: (
+    background: cl.$light-background,
+    text: #213547,
+    primary: cl.$light-color-primary-a0,
+    navegator: cl.$light-navegator,
+    button-bg: #215bf1,
+  ),
+  dark: (
+    background: cl.$dark-background,
+    text: cl.$dark-color-letter,
+    primary: cl.$dark-color-primary-a20,
+    navegator: cl.$dark-navegator,
+    button-bg: #215bf1,
+  )
+);
+
+// Mixin para obtener propiedades según el modo
+@mixin set-theme($theme) {
+  --background: #{map.get($theme, background)};
+  --text: #{map.get($theme, text)};
+  --navegator: #{map.get($theme, navegator)};
+  --primary: #{map.get($theme, primary)};
+  --button-bg: #{map.get($theme, button-bg)};
+}
+
+:root.light {
+  @include set-theme(map.get($themes, light));
+}
+
+:root.dark {
+  @include set-theme(map.get($themes, dark));
+}
+
+:root {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+a {
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-decoration: inherit;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--primary);
+  }
+  &.--active {
+    color: var(--primary);
+  }
+}
+
+// Botones
+button {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--button-bg);
+  cursor: pointer;
+  transition: border-color 0.25s;
+
+  &:hover {
+    border-color: #646cff;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+// Navegador
+.navegator {
+  z-index: 1;
+  background-color: var(--navegator);
+  box-shadow: 0px 0px 5px 0px var(--primary);
+
+  ul {
+    li {
+      text-align: center;
+      gap: 20px;
+
+      .icon {
+        font-size: 1.8rem;
+      }
+
+      .title {
+        font-size: 14px;
+        &--lang {
+          font-size: 1rem;
+        }
+      }
+
+      .lang {
+        background-color: var(--navegator);
+      }
+    }
+  }
+}
+
+.avatar {
+  box-sizing: border-box;
+  height: ct.$av-size;
+  width: ct.$av-size;
+	border-radius: 50%;
+	position: relative;
+  box-shadow: 0px 0px 50px var(--primary);
+
+  &__image {
+		width: 100%;
+		border-radius: 50%;
+	}
+
+  &::before,
+	&::after {
+		border: ct.$av-border-width solid transparent;
+		border-radius: 50%;
+		border-top: ct.$av-border-width solid var(--primary);
+		content:"";
+		display: block;
+		height: calc(100% + 10px);
+		left: 50%;
+		width: calc(100% + 10px);
+		position: absolute;
+	}
+	
+	&::before {
+		top: -2 * ct.$av-border-width;
+		transform: translateX(-50%);
+	}
+	
+	&::after {
+		bottom: -2 * ct.$av-border-width;
+		transform: translateX(-50%) rotate(180deg);
+	}
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+
+  .navegator {
+    width: ct.$nav-mobile-width;
+    ul {
+      li {
+        .icon {
+          font-size: 1.5rem;
+        }
+        .title {
+          font-size: 0.5rem;
+          &--lang {
+            font-size: 0.9rem;
+          }
+        }
+        .lang {
+          left: ct.$nav-mobile-width;
+          top: -10px;
+          width: calc(ct.$nav-mobile-width*1.5);
+        }
+      }
+    }
+  }
+}
+
+/* Estilos para desktop */
+@media (min-width: 769px) {
+  .wrapper {
+    margin-left: ct.$nav-desktop-width;
+  }
+
+  .navegator {
+    width: ct.$nav-desktop-width;
+    ul {
+      li {
+        .icon {
+          font-size: 2rem;
+        }
+        .title {
+          font-size: 0.875rem;
+          &--lang {
+            font-size: 1rem;
+          }
+        }
+
+        .lang {
+          left: ct.$nav-desktop-width;
+          top: -10px;
+          width: calc(ct.$nav-desktop-width / 1.125);
+        }
+      }
+    }
+  }
+
+  .skill-card {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    background-color: var(--primary);
+    color: white;
+  }
+}
