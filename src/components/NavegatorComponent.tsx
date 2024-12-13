@@ -26,6 +26,11 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
         setOpenLang(open => !open);
     }
 
+    const selectLang = (lang: string) => {
+        setOpenLang(false);
+        changeLang(lang)
+    }
+
     const toggleMenu = () => {
         setOpenMenu(open => !open);
     }
@@ -48,7 +53,7 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
             </nav>
             <nav className={`navegator fixed py-4 h-dvh ${showMenuDesktop()}`}>
                 <div className='flex flex-col h-full'>
-                    <div className='flex-none text-center text-2xl md:hidden'>
+                    <div className='flex-none text-center text-2xl md:hidden mb-3'>
                         <a onClick={toggleMenu}>
                             <FontAwesomeIcon icon={faTimes} />
                         </a>
@@ -107,7 +112,7 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                                 </a>
                             </li>
                         </ul>
-                        <ul className="px-1 md:px-3 relative grid gap-2">
+                        <ul className="px-1 md:px-3 relative grid gap-2 my-5">
                             <li>
                                 <a className={openLang ? '--active' : ''} onClick={toggleLang}>
                                     <div className='title--lang'>
@@ -118,12 +123,12 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                                     openLang &&
                                     <ul className='absolute lang gap-1 py-2 '>
                                         <li>
-                                            <a className={`font-normal ${preference?.lang == 'en' ? '--active' : ''}`} onClick={() => changeLang('en')}>
+                                            <a className={`font-normal ${preference?.lang == 'en' ? '--active' : ''}`} onClick={() => selectLang('en')}>
                                                 EN (Enlgish)
                                             </a>
                                         </li>
                                         <li>
-                                            <a className={`font-normal ${preference?.lang == 'es' ? '--active' : ''}`} onClick={() => changeLang('es')}>
+                                            <a className={`font-normal ${preference?.lang == 'es' ? '--active' : ''}`} onClick={() => selectLang('es')}>
                                                 ES (Español)
                                             </a>
                                         </li>

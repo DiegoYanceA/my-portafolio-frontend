@@ -101,13 +101,6 @@ button {
         font-size: 1.8rem;
       }
 
-      .title {
-        font-size: 14px;
-        &--lang {
-          font-size: 1rem;
-        }
-      }
-
       .lang {
         background-color: var(--navegator);
       }
@@ -165,7 +158,8 @@ button {
         .title {
           font-size: 0.5rem;
           &--lang {
-            font-size: 0.9rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
           }
         }
         .lang {
@@ -187,6 +181,21 @@ button {
   
 }
 
+@media (orientation: landscape) and (max-width: 768px) {
+  .avatar {
+    height: calc(ct.$av-size/2.5);
+    width: calc(ct.$av-size/2.5);
+    background-color: red;
+  }
+
+  .navegator {
+    overflow-y: auto;
+    .lang {
+      margin-bottom: 20px;
+    }
+  }
+}
+
 /* Estilos para desktop */
 @media (min-width: 769px) {
   .wrapper {
@@ -203,7 +212,7 @@ button {
         .title {
           font-size: 0.875rem;
           &--lang {
-            font-size: 1rem;
+            font-size: 1.2rem;
           }
         }
 
