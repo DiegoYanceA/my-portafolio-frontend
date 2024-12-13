@@ -1,11 +1,12 @@
-import Navegator from "./components/Navegator";
-import Wrapper from "./components/Wrapper";
+import Navegator from "./components/NavegatorComponent";
+import WrapperComponent from "./components/WrapperComponent";
 import { useConfig } from "./hooks/useConfig";
 
 function App() {
   const { config, changeThemeMode, changeLang} = useConfig();
-  
+
   return (
+    config.preference != null && config.translationLiteral != null && config.information &&
     <>
       <Navegator 
         preference = {config.preference}
@@ -13,9 +14,10 @@ function App() {
         changeThemeMode = {changeThemeMode}
         changeLang = {changeLang}
       />
-      <Wrapper
+      <WrapperComponent
         translationLiteral={config.translationLiteral}
-        user = {config.user}
+        information = {config.information}
+        preference = {config.preference}
       />
     </>
   )

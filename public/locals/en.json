@@ -10,7 +10,23 @@
         "text": "Projects"
     },
     "skill": {
-        "text": "Skills"
+        "text": "Skills",
+        "experience": "Comparison of years of experience by",
+        "proficiency": "Comparison of years of proficiency in training by",
+        "skills": [
+            {
+                "id": 1,
+                "title": "Programming language"
+            },
+            {
+                "id": 4,
+                "title": "Database"
+            },
+            {
+                "id": 5,
+                "title": "Others"
+            }
+        ]
     },
     "contact": {
         "text": "Contact"

@@ -10,7 +10,9 @@
         "text": "Proyectos"
     },
     "skill": {
-        "text": "Habilidades"
+        "text": "Habilidades",
+        "experience": "Comparativa de años de experiencia por",
+        "proficiency": "Comparativa de años de competencias en formación por"
     },
     "contact": {
         "text": "Contacto"

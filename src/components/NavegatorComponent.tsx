@@ -7,29 +7,49 @@ import {
     faGear,
     faSun,
     faMoon,
-    faTimes
+    faTimes,
+    faBars
 } from '@fortawesome/free-solid-svg-icons'
 import { NavegatorProps } from '../props';
 import { useState } from 'react';
 
-function Navigator({ preference, translationLiteral, changeLang, changeThemeMode }: NavegatorProps) {
+function NavegatorComponent({ preference, translationLiteral, changeLang, changeThemeMode }: NavegatorProps) {
     let isDark = preference?.dark;
     let lang = preference?.lang;
     let trans = translationLiteral;
 
     //State
     const [openLang, setOpenLang] = useState(false)
+    const [openMenu, setOpenMenu] = useState(true)
 
-    function toggleLang() {
+    const toggleLang = () => {
         setOpenLang(open => !open);
+    }
+
+    const toggleMenu = () => {
+        setOpenMenu(open => !open);
+    }
+
+    let showMenuDesktop = () => {
+        if(window.innerWidth < 768){
+            return openMenu?"move-right":"move-left";
+        }
+        return "";
     }
 
     return (
         <>
-            <nav className="navegator fixed py-4 h-dvh">
+            <nav className={`menu fixed py-2 w-screen md:hidden ${openMenu?"move-up":"move-down"}`}>
+                <div>
+                    <a className={"ml-5"} onClick={toggleMenu}>
+                        <FontAwesomeIcon icon={faBars} />
+                    </a>
+                </div>
+            </nav>
+            <nav className={`navegator fixed py-4 h-dvh ${showMenuDesktop()}`}>
                 <div className='flex flex-col h-full'>
                     <div className='flex-none text-center text-2xl md:hidden'>
-                        <a href="#">
+                        <a onClick={toggleMenu}>
                             <FontAwesomeIcon icon={faTimes} />
                         </a>
                     </div>
@@ -138,4 +158,4 @@ function Navigator({ preference, translationLiteral, changeLang, changeThemeMode
     );
 }
 
-export default Navigator;
+export default NavegatorComponent;

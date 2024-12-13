@@ -1,6 +1,6 @@
 export type Config = {
     preference: Preference,
-    user: User | undefined,
+    information: Information | undefined,
     translationLiteral: TranslationLiteral | undefined
 }
 
@@ -9,11 +9,28 @@ export type Preference = {
     dark: boolean
 }
 
+export type Information = {
+    user: User,
+    skills: Array<Skill>
+}
 
 export type User = {
     title: string,
     linkedin: string,
-    github: string
+    github: string,
+}
+
+export type Skill = {
+    id: number,
+    title: string,
+    stacks: Array<Stack> | undefined
+}
+
+export type Stack = {
+    title: string,
+    year: number,
+    month: number,
+    experience: boolean
 }
 
 export type TranslationLiteral = {
@@ -39,6 +56,9 @@ type ProjectLiteral = Literal & {
 }
 
 type SkillLiteral = Literal & {
+    experience: string,
+    proficiency: string,
+    skills: Array<Skill> | undefined
 }
 
 type ContactLiteral = Literal & {

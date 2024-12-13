@@ -1,13 +1,25 @@
-import { Preference, TranslationLiteral, User } from "../types"
+import { Information, Preference, Skill, TranslationLiteral, User } from "../types"
 
 export type NavegatorProps = {
-    preference: Preference | undefined, 
-    translationLiteral: TranslationLiteral | undefined,
+    preference: Preference, 
+    translationLiteral: TranslationLiteral ,
     changeLang: (lang:string) => void,
     changeThemeMode: (mode:boolean) => void
 }
 
-export type UserProps = {
-    translationLiteral: TranslationLiteral | undefined,
-    user: User | undefined,
+export type WrapperProps = {
+    translationLiteral: TranslationLiteral,
+    information: Information,
+    preference: Preference,
+}
+
+export type HomeProps = {
+    translationLiteral: TranslationLiteral,
+    user: User
+}
+
+export type SkillsProps = {
+    translationLiteral: TranslationLiteral,
+    skills: Array<Skill>,
+    isDark: boolean
 }

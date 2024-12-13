@@ -1,10 +1,12 @@
+@use 'tailwindcss/base';
+@use 'tailwindcss/components';
+@use 'tailwindcss/utilities';
+
+
 @use './consts' as ct;
 @use './colors' as cl;
 @use 'sass:map';
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@use './tags';
 
 // Variables de colores
 $themes: (
@@ -47,30 +49,7 @@ $themes: (
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-}
-
-h1 {
-  font-size: 5rem;
-}
-
-h2 {
-  font-size: 3.5rem;
-}
-
-h3 {
-  font-size: 2.5rem;
-}
-
-h4 {
-  font-size: 2rem;
-}
-
-h5 {
-  font-size: 1.5rem;
-}
-
-h6 {
-  font-size: 1.25rem;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -197,6 +176,15 @@ button {
       }
     }
   }
+
+  .menu {
+    z-index: 1;
+    font-size: 1.5rem;
+    background-color: var(--navegator);
+    box-shadow: 0px 0px 5px 0px var(--primary);
+  }
+
+  
 }
 
 /* Estilos para desktop */
@@ -234,5 +222,57 @@ button {
     height: 200px;
     background-color: var(--primary);
     color: white;
+  }
+}
+
+.move-up {
+  animation: moveDown .5s linear forwards; /* Aplicar animación */
+}
+
+.move-down {
+  animation: moveUp .5s linear forwards; /* Aplicar animación */
+}
+
+.move-left {
+  animation: moveLeft .5s linear forwards; /* Aplicar animación */
+}
+
+.move-right {
+  animation: moveRight .5s linear forwards; /* Aplicar animación */
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(-105%); /* Empezar en la posición original */
+  }
+  100% {
+    transform: translateY(0%); /* Mover hacia la izquierda */
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(0); /* Empezar en la posición original */
+  }
+  100% {
+    transform: translateY(-105%); /* Mover hacia la izquierda */
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0); /* Empezar en la posición original */
+  }
+  100% {
+    transform: translateX(-105%); /* Mover hacia la izquierda */
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-105%); /* Empezar en la posición original */
+  }
+  100% {
+    transform: translateX(0%); /* Mover hacia la izquierda */
   }
 }

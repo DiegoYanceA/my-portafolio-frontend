@@ -1,12 +1,12 @@
-import { UserProps } from "../props"
+import { HomeProps } from "../props"
 import perfil from '../assets/perfil.jpg'
 
-function Home({ user, translationLiteral }: UserProps) {
+function HomeComponent({ user, translationLiteral }: HomeProps) {
     let trans = translationLiteral;
 
     return (
         <>
-            <div id="home" className="h-screen px-20 py-7">
+            <div id="home" className="h-screen">
                 <div className="w-full h-full font-bold flex justify-center items-center">
                     <div className="grid gap-3 text-center">
                         <div className="block m-auto">
@@ -40,4 +40,4 @@ function Home({ user, translationLiteral }: UserProps) {
     )
 }
 
-export default Home
+export default HomeComponent

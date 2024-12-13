@@ -1,5 +1,261 @@
 {
-    "title": "Diego Yance",
-    "linkedin": "https://www.linkedin.com/in/diegoyance",
-    "github": "https://github.com/DiegoYanceA"
+    "user": {
+        "title": "Diego Yance",
+        "linkedin": "https://www.linkedin.com/in/diegoyance",
+        "github": "https://github.com/DiegoYanceA"
+    },
+    "skills": [
+        {
+            "id": 1,
+            "title": "Lenguaje de Programación",
+            "stacks": [
+                {
+                    "title": "Javascript",
+                    "year": 4,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Typescript",
+                    "year": 4,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "PHP",
+                    "year": 3,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "C#",
+                    "year": 4,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Go",
+                    "year": 1,
+                    "month": 0,
+                    "experience": false
+                },
+                {
+                    "title": "C++",
+                    "year": 1,
+                    "month": 0,
+                    "experience": false
+                },
+                {
+                    "title": "Java",
+                    "year": 2,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Python",
+                    "year": 2,
+                    "month": 0,
+                    "experience": false
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Frontend",
+            "stacks": [
+                {
+                    "title": "Angular",
+                    "year": 3,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "React.js",
+                    "year": 1,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Vue.js",
+                    "year": 2,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Tailwind",
+                    "year": 1,
+                    "month": 0,
+                    "experience": false
+                },
+                {
+                    "title": "Bootstrap 3 y 4",
+                    "year": 4,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "JQuery",
+                    "year": 4,
+                    "month": 0,
+                    "experience": true
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Backend",
+            "stacks": [
+                {
+                    "title": "Express.js",
+                    "year": 1,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "ASP.NET",
+                    "year": 3,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": ".Net Core 8",
+                    "year": 2,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Laravel",
+                    "year": 1,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "CodeIgniter",
+                    "year": 1,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Phalcon",
+                    "year": 1,
+                    "month": 0,
+                    "experience": true
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Base de datos",
+            "stacks": [
+                {
+                    "title": "MySQL",
+                    "year": 2,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "PostgreSQL",
+                    "year": 1,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "MongoDB",
+                    "year": 1,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "SQL Server",
+                    "year": 3,
+                    "month": 0,
+                    "experience": true
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Otros",
+            "stacks": [
+                {
+                    "title": "Vuforia",
+                    "year": 1,
+                    "month": 0,
+                    "experience": false
+                },
+                {
+                    "title": "GraphQL",
+                    "year": 1,
+                    "month": 0,
+                    "experience": false
+                },
+                {
+                    "title": "Node.js",
+                    "year": 4,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Dapper",
+                    "year": 2,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Entity Framework",
+                    "year": 2,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Figma",
+                    "year": 3,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Git",
+                    "year": 3,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Jira",
+                    "year": 3,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Postman",
+                    "year": 3,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Azure Cloud",
+                    "year": 3,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "SCRUM",
+                    "year": 4,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Unity",
+                    "year": 1,
+                    "month": 0,
+                    "experience": true
+                },
+                {
+                    "title": "Unreal Engine 4",
+                    "year": 1,
+                    "month": 0,
+                    "experience": false
+                }
+            ]
+        }
+    ]
 }
