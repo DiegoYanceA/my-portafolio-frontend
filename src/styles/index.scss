@@ -86,6 +86,14 @@ button {
   }
 }
 
+.goog-tooltip {
+  color:  black;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 // Navegador
 .navegator {
   z-index: 1;
@@ -100,12 +108,14 @@ button {
       .icon {
         font-size: 1.8rem;
       }
-
-      .lang {
-        background-color: var(--navegator);
-      }
     }
   }
+}
+
+.lang {
+  background-color: var(--navegator);
+  padding: 0.5rem 0.8rem ;
+  text-align: center;
 }
 
 .avatar {
@@ -153,22 +163,24 @@ button {
     ul {
       li {
         .icon {
-          font-size: 1.5rem;
+          font-size: 2rem;
         }
         .title {
-          font-size: 0.5rem;
+          font-size: 0.85rem;
           &--lang {
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             margin-bottom: 0.5rem;
           }
         }
-        .lang {
-          left: ct.$nav-mobile-width;
-          top: -10px;
-          width: calc(ct.$nav-mobile-width*1.5);
-        }
+        
       }
     }
+  }
+
+  .lang {
+    left: ct.$nav-mobile-width;
+    top: -10px;
+    width: calc(ct.$nav-mobile-width*1.5);
   }
 
   .menu {
@@ -190,9 +202,11 @@ button {
 
   .navegator {
     overflow-y: auto;
-    .lang {
-      margin-bottom: 20px;
-    }
+    
+  }
+
+  .lang {
+    margin-bottom: 20px;
   }
 }
 
@@ -216,13 +230,15 @@ button {
           }
         }
 
-        .lang {
-          left: ct.$nav-desktop-width;
-          top: -10px;
-          width: calc(ct.$nav-desktop-width / 1.125);
-        }
+        
       }
     }
+  }
+
+  .lang {
+    left: ct.$nav-desktop-width;
+    top: -10px;
+    width: calc(ct.$nav-desktop-width / 1.125);
   }
 
   .skill-card {
