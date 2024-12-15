@@ -24,6 +24,7 @@ function WrapperComponent({ information, translationLiteral, preference }: Wrapp
 
             <ContactComponent
               user = {information.user}
+              translationLiteral={translationLiteral}
             />
           </>
         }

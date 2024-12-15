@@ -45,6 +45,7 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
     }
 
     const toggleMenu = () => {
+        setOpenLang(false);
         setOpenMenu(open => !open);
     }
 
@@ -63,14 +64,14 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
 
     return (
         <>
-            <nav className={`menu fixed py-2 w-screen md:hidden ${openMenu?"move-up":"move-down"}`}>
+            <nav className={`z-30 menu fixed py-2 w-screen md:hidden ${openMenu?"move-up":"move-down"}`}>
                 <div>
                     <a className={"ml-5"} onClick={toggleMenu}>
                         <FontAwesomeIcon icon={faBars} />
                     </a>
                 </div>
             </nav>
-            <nav className={`navegator fixed max-h-dvh  md:h-dvh ${showMenuDesktop()}`}>
+            <nav className={`z-20 navegator fixed max-h-dvh  md:h-dvh ${showMenuDesktop()}`}>
                 <div className='flex flex-col h-full pt-4 pb-10 md:py-4'>
                     <div className='flex-none text-center text-2xl md:hidden mb-3'>
                         <a onClick={toggleMenu}>
@@ -164,7 +165,7 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                 </div>
 
             </nav>
-            <div className='absolute' ref={menuFloatRef}> 
+            <div className='z-30 fixed' ref={menuFloatRef}> 
                 {
                     openLang &&
                     <ul className='absolute lang gap-1 py-2 '>
@@ -180,6 +181,9 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                         </li>
                     </ul>
                 }
+            </div>
+            <div onClick={toggleMenu} className={`bg-opacity-50 bg-black z-10 fixed h-screen w-full lg:hidden ${openMenu?'block':'hidden'}`} >
+                
             </div>
         </>
     );

@@ -5,7 +5,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { OptionsObject, SnackbarKey, useSnackbar } from "notistack"
 import sideImg from '../assets/Side.jpeg'
 
-function ContactComponent({ user }: ContactProps) {
+function ContactComponent({ user, translationLiteral }: ContactProps) {
 
   const action = (snackbarId: SnackbarKey) => (
     <>
@@ -53,7 +53,7 @@ function ContactComponent({ user }: ContactProps) {
           <div className="contact__information rounded-r-lg ">
             <div className="grid grid-cols-1 content-center h-full gap-y-5">
               <div>
-                <h2 className="font-bold text-center">Contact me</h2>
+                <h2 className="font-bold text-center">{translationLiteral.contact?.text}</h2>
               </div>
               <div className="grid grid-cols-2 lg:grid-cols-1 text-center lg:gap-y-4">
                 <div className="grid grid-cols-1 gap-y-5 lg:gap-y-0 lg:gap-x-5 lg:flex justify-center">

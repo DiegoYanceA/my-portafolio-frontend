@@ -25,5 +25,6 @@ export type SkillsProps = {
 }
 
 export type ContactProps = {
-    user: User
+    user: User,
+    translationLiteral: TranslationLiteral
 }
