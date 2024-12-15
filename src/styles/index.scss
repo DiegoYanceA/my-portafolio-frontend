@@ -98,15 +98,19 @@ button {
 .navegator {
   background-color: var(--navegator);
   box-shadow: 0px 0px 5px 0px var(--primary);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
   ul {
     li {
       text-align: center;
-      gap: 20px;
-
-      .icon {
-        font-size: 1.8rem;
+      a {
+        display: block;
       }
+
+      
     }
   }
 }
@@ -162,21 +166,31 @@ button {
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
+  .wrapper {
+    margin-top: ct.$nav-menu;
+  }
+
+  .h-screen-fix {
+    height: calc(100vh - ct.$nav-menu);
+  }
 
   .navegator {
     width: ct.$nav-mobile-width;
     ul {
       li {
-        .icon {
-          font-size: 2rem;
-        }
-        .title {
-          font-size: 0.85rem;
-          &--lang {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+        a {
+          padding: 0.65rem 0px;
+          .icon {
+            font-size: 2rem;
+          }
+          .title {
+            font-size: 0.85rem;
+            &-lang {
+              font-size: 1.5rem;
+            }
           }
         }
+        
         
       }
     }
@@ -192,6 +206,8 @@ button {
     font-size: 1.5rem;
     background-color: var(--navegator);
     box-shadow: 0px 0px 5px 0px var(--primary);
+    height: ct.$nav-menu;
+    top: 0;
   }
 
   
@@ -224,13 +240,16 @@ button {
     width: ct.$nav-desktop-width;
     ul {
       li {
-        .icon {
-          font-size: 2rem;
-        }
-        .title {
-          font-size: 0.875rem;
-          &--lang {
-            font-size: 1.2rem;
+        a {
+          padding: 0.5rem 0;
+          .icon {
+            font-size: 2rem;
+          }
+          .title {
+            font-size: 0.875rem;
+            &--lang {
+              font-size: 1.2rem;
+            }
           }
         }
 

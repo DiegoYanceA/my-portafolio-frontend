@@ -6,7 +6,7 @@ function HomeComponent({ user, translationLiteral }: HomeProps) {
 
     return (
         <>
-            <div id="home" className="h-screen">
+            <div id="home" className="h-screen-fix lg:h-screen">
                 <div className="w-full h-full font-bold flex justify-center items-center">
                     <div className="grid gap-3 text-center">
                         <div className="block m-auto">

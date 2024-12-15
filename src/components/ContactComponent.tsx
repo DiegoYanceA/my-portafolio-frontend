@@ -43,8 +43,8 @@ function ContactComponent({ user, translationLiteral }: ContactProps) {
 
   return (
     <>
-      <div id="contact" className="contact h-screen">
-        <div className="h-full w-full grid grid-cols-1 lg:grid-cols-2 py-40 lg:py-10 px-4 lg:px-32">
+      <div id="contact" className="contact h-screen-fix lg:h-screen">
+        <div className="h-full w-full grid grid-cols-1 lg:grid-cols-2 py-14 lg:py-10 px-4 lg:px-32">
           <div className="hidden lg:block">
             {sideImg != null ?
               <img className="contact__img rounded-l-lg h-full w-full" src={sideImg} alt="Side" /> : ""

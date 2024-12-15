@@ -71,16 +71,15 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                     </a>
                 </div>
             </nav>
-            <nav className={`z-20 navegator fixed max-h-dvh  md:h-dvh ${showMenuDesktop()}`}>
-                <div className='flex flex-col h-full pt-4 pb-10 md:py-4'>
-                    <div className='flex-none text-center text-2xl md:hidden mb-3'>
-                        <a onClick={toggleMenu}>
-                            <FontAwesomeIcon icon={faTimes} />
-                        </a>
-                    </div>
-                    <div className='flex-auto grid content-between '>
-                        <ul className="px-1 md:px-3 grid gap-5">
-
+            <nav className={`z-20 navegator fixed h-dvh max-h-vh  md:h-dvh ${showMenuDesktop()}`}>
+                <div className='h-full'>
+                    <div className='h-full grid grids-cols-1 content-between '>
+                        <ul className="px-1 md:px-3 grid">
+                            <li className='text-center text-2xl md:hidden'>
+                                <a onClick={toggleMenu}>
+                                    <FontAwesomeIcon icon={faTimes} />
+                                </a>
+                            </li>
                             <li>
                                 <a href="#home">
                                     <div className='icon'>
@@ -133,10 +132,10 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                             </li>
                         </ul>
 
-                        <ul className="px-1 mt-10 md:mt-0 md:px-3 grid gap-2">
+                        <ul className="px-1 md:mt-0 md:px-3 grid">
                             <li ref={itemLangRef}>
                                 <a className={openLang ? '--active' : ''} onClick={toggleLang}>
-                                    <div className='title--lang'>
+                                    <div className='title-lang'>
                                         {lang?.toUpperCase() || "N/A"}
                                     </div>
                                 </a>
