@@ -72,7 +72,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--button-bg);
+  // background-color: var(--button-bg);
   cursor: pointer;
   transition: border-color 0.25s;
 
@@ -153,6 +153,12 @@ button {
 		bottom: -2 * ct.$av-border-width;
 		transform: translateX(-50%) rotate(180deg);
 	}
+}
+
+.contact {
+  &__information {
+    background-color: var(--navegator);
+  }
 }
 
 /* Estilos para dispositivos móviles */
@@ -238,15 +244,14 @@ button {
   .lang {
     left: ct.$nav-desktop-width;
     top: -10px;
-    width: calc(ct.$nav-desktop-width / 1.125);
+    width: calc(ct.$nav-desktop-width);
   }
 
-  .skill-card {
-    border-radius: 100%;
-    width: 200px;
-    height: 200px;
-    background-color: var(--primary);
-    color: white;
+  .contact {
+    &__img {
+      object-fit: cover;
+      object-position: center;
+    }
   }
 }
 

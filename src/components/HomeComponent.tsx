@@ -1,5 +1,5 @@
 import { HomeProps } from "../props"
-import perfil from '../assets/perfil.jpg'
+import perfilImg from '../assets/perfil.jpg'
 
 function HomeComponent({ user, translationLiteral }: HomeProps) {
     let trans = translationLiteral;
@@ -11,8 +11,8 @@ function HomeComponent({ user, translationLiteral }: HomeProps) {
                     <div className="grid gap-3 text-center">
                         <div className="block m-auto">
                             <div className="avatar">
-                                {perfil != null ?
-                                    <img className="avatar__image" src={perfil} alt="Perfil" /> :
+                                {perfilImg != null ?
+                                    <img className="avatar__image" src={perfilImg} alt="Perfil" /> :
                                     <div className="avatar__image animate-pulse h-full bg-slate-700 rounded"></div>
                                 }
 

@@ -96,7 +96,7 @@ function SkillsComponent({ skills, translationLiteral, isDark }: SkillsProps) {
                     chartType="PieChart"
                     data={data}
                     width={"100%"}
-                    height={(window.innerWidth < 768)?200:370}
+                    height={(window.innerWidth < 768)?250:370}
                     options={cloneOpt}
                 />
             </div>

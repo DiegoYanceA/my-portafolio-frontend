@@ -23,3 +23,7 @@ export type SkillsProps = {
     skills: Array<Skill>,
     isDark: boolean
 }
+
+export type ContactProps = {
+    user: User
+}

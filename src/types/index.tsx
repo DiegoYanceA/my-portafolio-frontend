@@ -18,6 +18,7 @@ export type User = {
     title: string,
     linkedin: string,
     github: string,
+    email: string
 }
 
 export type Skill = {

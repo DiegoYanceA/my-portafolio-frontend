@@ -1,4 +1,5 @@
 import { WrapperProps } from "../props"
+import ContactComponent from "./ContactComponent";
 import HomeComponent from "./HomeComponent";
 import SkillsComponent from "./SkillsComponent";
 
@@ -6,7 +7,7 @@ function WrapperComponent({ information, translationLiteral, preference }: Wrapp
 
   return (
     <>
-      <section className="wrapper px-2 lg:px-20 lg:py-7">
+      <section className="wrapper px-2 lg:px-20">
         {
           information != null &&
           <>
@@ -20,27 +21,12 @@ function WrapperComponent({ information, translationLiteral, preference }: Wrapp
               skills = {information.skills}
               isDark = {preference?.dark}
             />
+
+            <ContactComponent
+              user = {information.user}
+            />
           </>
         }
-        
-        {/* <div id="experience" className="px-20 py-7">
-          <div className="w-full">
-            <h2 className="text-center font-bold">Experiencia laboral</h2>
-          </div>
-          <div className="grid grid-cols-4 gap-4">
-            
-          <div>
-            <img className="w-24 h-24 mb-3" src='./business/Santillana.png' alt="Santillana"/>
-            <div>
-              
-            </div>
-          </div>
-          
-          
-
-          </div>
-          
-        </div> */}
         
         
       </section>

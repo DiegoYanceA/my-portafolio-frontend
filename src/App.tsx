@@ -1,3 +1,4 @@
+import { SnackbarProvider } from "notistack";
 import Navegator from "./components/NavegatorComponent";
 import WrapperComponent from "./components/WrapperComponent";
 import { useConfig } from "./hooks/useConfig";
@@ -8,17 +9,19 @@ function App() {
   return (
     config.preference != null && config.translationLiteral != null && config.information &&
     <>
-      <Navegator 
-        preference = {config.preference}
-        translationLiteral = {config.translationLiteral}
-        changeThemeMode = {changeThemeMode}
-        changeLang = {changeLang}
-      />
-      <WrapperComponent
-        translationLiteral={config.translationLiteral}
-        information = {config.information}
-        preference = {config.preference}
-      />
+      <SnackbarProvider>
+        <Navegator 
+          preference = {config.preference}
+          translationLiteral = {config.translationLiteral}
+          changeThemeMode = {changeThemeMode}
+          changeLang = {changeLang}
+        />
+        <WrapperComponent
+          translationLiteral={config.translationLiteral}
+          information = {config.information}
+          preference = {config.preference}
+        />
+      </SnackbarProvider>
     </>
   )
 }
