@@ -3,7 +3,7 @@ import { ContactProps } from "../props"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { OptionsObject, SnackbarKey, useSnackbar } from "notistack"
-import sideImg from '../assets/Side.jpeg'
+import sideImg from '../assets/side.jpg'
 
 function ContactComponent({ user, translationLiteral }: ContactProps) {
 
