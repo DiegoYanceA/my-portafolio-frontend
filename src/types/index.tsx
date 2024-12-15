@@ -42,6 +42,10 @@ export type TranslationLiteral = {
     contact: ContactLiteral
 }
 
+export type Snackbard = {
+    copy: string
+}
+
 type Literal = {
     text: string,
     description: string
@@ -63,4 +67,5 @@ type SkillLiteral = Literal & {
 }
 
 type ContactLiteral = Literal & {
+    snackbard: Snackbard
 }

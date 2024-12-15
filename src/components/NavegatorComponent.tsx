@@ -181,7 +181,7 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                     </ul>
                 }
             </div>
-            <div onClick={toggleMenu} className={`bg-opacity-50 bg-black z-10 fixed h-screen w-full lg:hidden ${openMenu?'block':'hidden'}`} >
+            <div onClick={toggleMenu} className={`top-0 bg-opacity-50 bg-black z-10 fixed h-screen w-full lg:hidden ${openMenu?'block':'hidden'}`} >
                 
             </div>
         </>

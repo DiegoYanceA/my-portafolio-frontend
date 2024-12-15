@@ -15,6 +15,9 @@
         "proficiency": "Comparativa de años de competencias en formación por"
     },
     "contact": {
-        "text": "Contáctame"
+        "text": "Contáctame",
+        "snackbard": {
+            "copy": "Copiado!"
+        }
     }
 }

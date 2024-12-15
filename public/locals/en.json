@@ -29,6 +29,9 @@
         ]
     },
     "contact": {
-        "text": "Get in touch"
+        "text": "Get in touch",
+        "snackbard": {
+            "copy": "Copied!"
+        }
     }
 }

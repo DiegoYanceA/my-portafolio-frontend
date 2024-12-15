@@ -32,7 +32,7 @@ function ContactComponent({ user, translationLiteral }: ContactProps) {
   const copyText = (text: string) => {
     navigator.clipboard.writeText(text)
       .then(() => {
-        enqueueSnackbar('Copiado!', options)
+        enqueueSnackbar(translationLiteral.contact.snackbard.copy, options)
       })
       .catch(err => {
         console.error("Error al copiar el texto: ", err);
@@ -57,18 +57,18 @@ function ContactComponent({ user, translationLiteral }: ContactProps) {
               </div>
               <div className="grid grid-cols-2 lg:grid-cols-1 text-center lg:gap-y-4">
                 <div className="grid grid-cols-1 gap-y-5 lg:gap-y-0 lg:gap-x-5 lg:flex justify-center">
-                  <a href={`mailto:${user.email}`} className="text-5xl lg:text-base">
+                  <a href={`mailto:${user.email}`} className="text-5xl">
                     <FontAwesomeIcon icon={faEnvelope} /> 
-                    <span className="hidden lg:block"> {user.email}</span>
+                    <span className="hidden lg:block lg:text-base"> {user.email}</span>
                   </a>
                   <button className="focus:outline-none p-0 text-2xl lg:text-base" onClick={() => copyText(user.email)}>
                     <FontAwesomeIcon icon={faCopy} />
                   </button>
                 </div>
                 <div className="grid grid-cols-1 gap-y-5 lg:gap-y-0 lg:gap-x-5 lg:flex justify-center">
-                  <a href={user.linkedin} target="_blank" className="text-5xl lg:text-base">
+                  <a href={user.linkedin} target="_blank" className="text-5xl">
                     <FontAwesomeIcon icon={faLinkedin} /> 
-                    <span className="hidden lg:block"> {user.linkedin}</span>
+                    <span className="hidden lg:block lg:text-base"> {user.linkedin}</span>
                     
                   </a>
                   <button className="focus:outline-none p-0 text-2xl lg:text-base" onClick={() => copyText(user.linkedin)}>
