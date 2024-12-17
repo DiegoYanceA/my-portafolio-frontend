@@ -24,6 +24,11 @@ export type SkillsProps = {
     isDark: boolean
 }
 
+export type SkillsTableProps = {
+    translationLiteral: TranslationLiteral,
+    skills: Array<Skill>
+}
+
 export type ContactProps = {
     user: User,
     translationLiteral: TranslationLiteral

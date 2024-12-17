@@ -1,11 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { SkillsProps } from "../props";
+import { SkillsTableProps } from "../props";
 import { faChevronLeft, faChevronRight, faCircleCheck, faCircleXmark, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { SkillStackTable } from "../types";
 
-function TableComponent({ skills, translationLiteral, isDark }: SkillsProps) {
-
+function TableComponent({ skills, translationLiteral }: SkillsTableProps) {
     const trans = translationLiteral.skills.table;
     const [category, _] = useState<Array<string>>(initCategory);
     const [categoryFilter, setCategoryFilter] = useState('*');
