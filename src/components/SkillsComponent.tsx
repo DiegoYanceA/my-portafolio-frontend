@@ -113,8 +113,7 @@ function SkillsComponent({ skills, translationLiteral, isDark }: SkillsProps) {
             <div>
                 <TableComponent 
                     skills={skills}
-                    translationLiteral={translationLiteral} 
-                    isDark={false}
+                    translationLiteral={translationLiteral}
                 />
             </div>
 
