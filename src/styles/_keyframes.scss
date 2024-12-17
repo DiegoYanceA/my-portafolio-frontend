@@ -1,0 +1,55 @@
+.move-up {
+    animation: moveDown .5s linear forwards;
+}
+
+.move-down {
+    animation: moveUp .5s linear forwards;
+}
+
+.move-left {
+    animation: moveLeft .5s linear forwards;
+}
+
+.move-right {
+    animation: moveRight .5s linear forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(-105%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-105%);
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-105%);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(-105%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}

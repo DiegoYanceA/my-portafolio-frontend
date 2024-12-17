@@ -9,10 +9,18 @@
     "project": {
         "text": "Proyectos"
     },
-    "skill": {
+    "skills": {
         "text": "Habilidades",
         "experience": "Comparativa de años de experiencia por",
-        "proficiency": "Comparativa de años de competencias en formación por"
+        "proficiency": "Comparativa de años de competencias en formación por",
+        "table":{
+            "header":["Logo", "Nombre", "Categoría", "Años de experiencia", "Experiencia laboral"],
+            "experienceLabel": "Experiencia Laboral",
+            "experienceOptions": ["Todos", "Con experiencia", "Sin experiencia"],
+            "categoryLabel": "Category",
+            "nameLabel": "Nombre",
+            "yearsLabel": "Años"
+        }
     },
     "contact": {
         "text": "Contáctame",

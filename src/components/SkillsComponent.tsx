@@ -2,6 +2,7 @@ import { Chart } from "react-google-charts";
 
 import { Skill, Stack } from '../types';
 import { SkillsProps } from '../props';
+import TableComponent from "./TableComponent";
 
 const options = {
     backgroundColor: "transparent",
@@ -81,8 +82,8 @@ function SkillsComponent({ skills, translationLiteral, isDark }: SkillsProps) {
         const addClass = double? "lg:col-span-2":"";
 
         let title = item.title;
-        if(translationLiteral.skill?.skills != null){
-            const skillsTrans = translationLiteral.skill.skills;
+        if(translationLiteral.skills?.list != null){
+            const skillsTrans = translationLiteral.skills.list;
             const itemTrans = skillsTrans.find(x => x.id == item.id);
             if(itemTrans != null) {
                 title = itemTrans.title;
@@ -104,13 +105,21 @@ function SkillsComponent({ skills, translationLiteral, isDark }: SkillsProps) {
     } 
 
     return (
-        <div id="skills">
+        <div id="skills" className="section skills" data-title={translationLiteral.skills?.text}>
             <div className="w-full mb-5">
-                <h2 className="font-bold text-center">{translationLiteral?.skill.text}</h2>
+                <h2 className="font-bold text-center">{translationLiteral?.skills.text}</h2>
+            </div>
+
+            <div>
+                <TableComponent 
+                    skills={skills}
+                    translationLiteral={translationLiteral} 
+                    isDark={false}
+                />
             </div>
 
             <div className="w-full mb-10">
-                <h4 className="font-bold text-center">{translationLiteral?.skill.experience}</h4>
+                <h4 className="font-bold text-center">{translationLiteral?.skills.experience}</h4>
             </div>
             
             <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-x-3">
@@ -124,7 +133,7 @@ function SkillsComponent({ skills, translationLiteral, isDark }: SkillsProps) {
             </div>
 
             <div className="w-full mb-10">
-                <h5 className="font-bold text-center">{translationLiteral?.skill.proficiency}</h5>
+                <h5 className="font-bold text-center">{translationLiteral?.skills.proficiency}</h5>
             </div>
 
             <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-x-3">

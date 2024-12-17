@@ -9,11 +9,11 @@
     "project": {
         "text": "Projects"
     },
-    "skill": {
+    "skills": {
         "text": "Skills",
         "experience": "Comparison of years of experience by",
         "proficiency": "Comparison of years of proficiency in training by",
-        "skills": [
+        "list": [
             {
                 "id": 1,
                 "title": "Programming language"
@@ -24,9 +24,21 @@
             },
             {
                 "id": 5,
+                "title": "Videogames"
+            },
+            {
+                "id": 6,
                 "title": "Others"
             }
-        ]
+        ],
+        "table":{
+            "header":["Logo", "Name",  "Category", "Years of experience", "Work Experience"],
+            "experienceLabel": "Job Experience",
+            "experienceOptions": ["All", "With experience", "Without experience"],
+            "categoryLabel": "Categoría",
+            "nameLabel": "Name",
+            "yearsLabel": "Years"
+        }
     },
     "contact": {
         "text": "Get in touch",

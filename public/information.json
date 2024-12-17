@@ -14,49 +14,57 @@
                     "title": "Javascript",
                     "year": 4,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/javascript.png"
                 },
                 {
                     "title": "Typescript",
                     "year": 4,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/ts.png"
                 },
                 {
                     "title": "PHP",
                     "year": 3,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/php.png"
                 },
                 {
                     "title": "C#",
                     "year": 4,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/csharp.png"
                 },
                 {
                     "title": "Go",
                     "year": 1,
                     "month": 0,
-                    "experience": false
+                    "experience": false,
+                    "logo": "./technology/go.png"
                 },
                 {
                     "title": "C++",
                     "year": 1,
                     "month": 0,
-                    "experience": false
+                    "experience": false,
+                    "logo": "./technology/c++.png"
                 },
                 {
                     "title": "Java",
                     "year": 2,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/java.png"
                 },
                 {
                     "title": "Python",
                     "year": 2,
                     "month": 0,
-                    "experience": false
+                    "experience": false,
+                    "logo": "./technology/python.webp"
                 }
             ]
         },
@@ -68,37 +76,43 @@
                     "title": "Angular",
                     "year": 3,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/angular.png"
                 },
                 {
                     "title": "React.js",
                     "year": 1,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/react.png"
                 },
                 {
                     "title": "Vue.js",
                     "year": 2,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/vuejs.png"
                 },
                 {
                     "title": "Tailwind",
                     "year": 1,
                     "month": 0,
-                    "experience": false
+                    "experience": false,
+                    "logo": "./technology/tailwind.png"
                 },
                 {
                     "title": "Bootstrap 3 y 4",
                     "year": 4,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/bootstrap.png"
                 },
                 {
                     "title": "JQuery",
                     "year": 4,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/jquery.png"
                 }
             ]
         },
@@ -110,37 +124,43 @@
                     "title": "Express.js",
                     "year": 1,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/express.png"
                 },
                 {
                     "title": "ASP.NET",
                     "year": 3,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/aspnet.png"
                 },
                 {
                     "title": ".Net Core 8",
                     "year": 2,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/netcore.png"
                 },
                 {
                     "title": "Laravel",
                     "year": 1,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/laravel.png"
                 },
                 {
                     "title": "CodeIgniter",
                     "year": 1,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/codeigniter.svg"
                 },
                 {
                     "title": "Phalcon",
                     "year": 1,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/phalcon.png"
                 }
             ]
         },
@@ -152,109 +172,146 @@
                     "title": "MySQL",
                     "year": 2,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/mysql.png"
                 },
                 {
                     "title": "PostgreSQL",
                     "year": 1,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/postgres.png"
                 },
                 {
                     "title": "MongoDB",
                     "year": 1,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/mongo.png"
                 },
                 {
                     "title": "SQL Server",
                     "year": 3,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/sqlserver.png"
+                },
+                {
+                    "title": "CosmoDB",
+                    "year": 1,
+                    "month": 0,
+                    "experience": true,
+                    "logo": "./technology/cosmodb.png"
                 }
             ]
         },
         {
             "id": 5,
+            "title": "Videojuegos",
+            "stacks": [
+                {
+                    "title": "Unity",
+                    "year": 1,
+                    "month": 0,
+                    "experience": true,
+                    "logo": "./technology/unity.png"
+                },
+                {
+                    "title": "Phaser.js",
+                    "year": 1,
+                    "month": 0,
+                    "experience": true,
+                    "logo": "./technology/phaser.png"
+                },
+                {
+                    "title": "Unreal Engine 4",
+                    "year": 1,
+                    "month": 0,
+                    "experience": false,
+                    "logo": "./technology/ur.png"
+                }
+            ]
+        },
+        {
+            "id": 6,
             "title": "Otros",
             "stacks": [
                 {
                     "title": "Vuforia",
                     "year": 1,
                     "month": 0,
-                    "experience": false
+                    "experience": false,
+                    "logo": "./technology/vuforia.png"
                 },
                 {
                     "title": "GraphQL",
                     "year": 1,
                     "month": 0,
-                    "experience": false
+                    "experience": false,
+                    "logo": "./technology/graphql.png"
                 },
                 {
                     "title": "Node.js",
                     "year": 4,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/nodejs.svg"
                 },
                 {
                     "title": "Dapper",
                     "year": 2,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/dapper.png"
                 },
                 {
                     "title": "Entity Framework",
                     "year": 2,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/ef.png"
                 },
                 {
                     "title": "Figma",
                     "year": 3,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/figma.svg"
                 },
                 {
                     "title": "Git",
                     "year": 3,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/git.png"
                 },
                 {
                     "title": "Jira",
                     "year": 3,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/jira.png"
                 },
                 {
                     "title": "Postman",
                     "year": 3,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/postman.webp"
                 },
                 {
                     "title": "Azure Cloud",
                     "year": 3,
                     "month": 0,
-                    "experience": true
+                    "experience": true,
+                    "logo": "./technology/azure.webp"
                 },
                 {
                     "title": "SCRUM",
                     "year": 4,
                     "month": 0,
-                    "experience": true
-                },
-                {
-                    "title": "Unity",
-                    "year": 1,
-                    "month": 0,
-                    "experience": true
-                },
-                {
-                    "title": "Unreal Engine 4",
-                    "year": 1,
-                    "month": 0,
-                    "experience": false
+                    "experience": true,
+                    "logo": "./technology/scrum.svg"
                 }
             ]
         }

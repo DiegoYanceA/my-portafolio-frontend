@@ -11,7 +11,7 @@ import {
     faBars
 } from '@fortawesome/free-solid-svg-icons'
 import { NavegatorProps } from '../props';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function NavegatorComponent({ preference, translationLiteral, changeLang, changeThemeMode }: NavegatorProps) {
     let isDark = preference?.dark;
@@ -21,6 +21,9 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
     //State
     const [openLang, setOpenLang] = useState(false)
     const [openMenu, setOpenMenu] = useState(false)
+    const [activeSection, setActiveSection] = useState<string  | null>(null);
+    const [title, setTitle] = useState<string  | null>(null);
+    const [progress, setProgress] = useState(0);
 
     const itemLangRef = useRef<HTMLLIElement  | null>(null);
     const menuFloatRef = useRef<HTMLDivElement  | null>(null);
@@ -49,7 +52,7 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
         setOpenMenu(open => !open);
     }
 
-    let showMenuDesktop = () => {
+    const showMenuDesktop = () => {
         document.body.classList.remove("no-scroll");
         if(window.innerWidth < 768){
             if(openMenu) {
@@ -62,16 +65,69 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
         return "";
     }
 
+    
+
+    useEffect(() => {
+        // Crear un observer para las secciones
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target as HTMLElement;
+                        if(target.dataset.title != null){
+                            setTitle(target.dataset.title);
+                        }
+                        
+                        setActiveSection(target.id);
+                    }
+                });
+            },
+            {
+                threshold: 0.2,
+            }
+        );
+
+        // Seleccionar todas las secciones para observar
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => observer.observe(section));
+
+
+        const handleScroll = () => {
+            const scrollTop = window.scrollY; 
+            const docHeight = document.documentElement.scrollHeight;
+            const winHeight = window.innerHeight;
+
+            if (docHeight <= winHeight) {
+                setProgress(100);
+                return;
+            }
+
+            const scrollProgress = (scrollTop / (docHeight - winHeight)) * 100;
+            setProgress(scrollProgress); 
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            observer.disconnect();
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, []);
+
     return (
         <>
+            <div className={"progress-bar top-0 fixed h-0.5 overflow-hidden z-40 w-full"}>
+                <div className={"progress-bar__loading flex flex-col overflow-hidden transition duration-500 w-full h-full"} style={{width: `${progress}%`}}></div>
+            </div>
+            
             <nav className={`z-30 menu fixed py-2 w-screen md:hidden ${openMenu?"move-up":"move-down"}`}>
-                <div>
-                    <a className={"ml-5"} onClick={toggleMenu}>
-                        <FontAwesomeIcon icon={faBars} />
+                <div className='px-5'>
+                    <a className={"truncate block max-w-full" } onClick={toggleMenu}>
+                        <FontAwesomeIcon icon={faBars} /> {title}
                     </a>
                 </div>
             </nav>
-            <nav className={`z-20 navegator fixed h-dvh max-h-vh  md:h-dvh ${showMenuDesktop()}`}>
+            <nav className={`z-20 navegator fixed h-dvh max-h-vh md:h-dvh ${showMenuDesktop()}`}>
                 <div className='h-full'>
                     <div className='h-full grid grids-cols-1 content-between '>
                         <ul className="px-1 md:px-3 grid">
@@ -81,7 +137,7 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                                 </a>
                             </li>
                             <li>
-                                <a href="#home">
+                                <a href="#home" className={activeSection === 'home' ? '--active' : ''}>
                                     <div className='icon'>
                                         <FontAwesomeIcon icon={faHome} />
                                     </div>
@@ -91,7 +147,7 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                                 </a>
                             </li>
                             <li>
-                                <a href="#experience">
+                                <a href="#experience" className={activeSection === 'experience' ? '--active' : ''}>
                                     <div className='icon'>
                                         <FontAwesomeIcon icon={faBuilding} />
                                     </div>
@@ -101,7 +157,7 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                                 </a>
                             </li>
                             <li>
-                                <a href="#project">
+                                <a href="#project" className={activeSection === 'project' ? '--active' : ''}>
                                     <div className='icon'>
                                         <FontAwesomeIcon icon={faGear} />
                                     </div>
@@ -111,17 +167,17 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                                 </a>
                             </li>
                             <li>
-                                <a href="#skills">
+                                <a href="#skills" className={activeSection === 'skills' ? '--active' : ''}>
                                     <div className='icon'>
                                         <FontAwesomeIcon icon={faLightbulb} />
                                     </div>
                                     <div className='title'>
-                                        {trans?.skill.text || <div className="animate-pulse h-3 bg-slate-700 rounded mx-5 mt-2"></div>}
+                                        {trans?.skills.text || <div className="animate-pulse h-3 bg-slate-700 rounded mx-5 mt-2"></div>}
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#contact">
+                                <a href="#contact" className={activeSection === 'contact' ? '--active' : ''}>
                                     <div className='icon'>
                                         <FontAwesomeIcon icon={faPhone} />
                                     </div>

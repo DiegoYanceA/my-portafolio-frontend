@@ -7,6 +7,7 @@
 @use './colors' as cl;
 @use 'sass:map';
 @use './tags';
+@use './keyframes';
 
 // Variables de colores
 $themes: (
@@ -14,6 +15,7 @@ $themes: (
     background: cl.$light-background,
     text: #213547,
     primary: cl.$light-color-primary-a0,
+    secondary: cl.$light-color-secondary-a0,
     navegator: cl.$light-navegator,
     button-bg: #215bf1,
   ),
@@ -21,6 +23,7 @@ $themes: (
     background: cl.$dark-background,
     text: cl.$dark-color-letter,
     primary: cl.$dark-color-primary-a20,
+    secondary: cl.$dark-color-secondary-a0,
     navegator: cl.$dark-navegator,
     button-bg: #215bf1,
   )
@@ -32,6 +35,7 @@ $themes: (
   --text: #{map.get($theme, text)};
   --navegator: #{map.get($theme, navegator)};
   --primary: #{map.get($theme, primary)};
+  --secondary: #{map.get($theme, secondary)};
   --button-bg: #{map.get($theme, button-bg)};
 }
 
@@ -52,6 +56,14 @@ $themes: (
   scroll-behavior: smooth;
 }
 
+.progress-bar {
+  background-color: transparent;
+  &__loading {
+    
+    background-color: var(--primary);
+  }
+}
+
 a {
   font-weight: 500;
   transition: color 0.3s ease;
@@ -63,26 +75,6 @@ a {
   }
   &.--active {
     color: var(--primary);
-  }
-}
-
-// Botones
-button {
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  // background-color: var(--button-bg);
-  cursor: pointer;
-  transition: border-color 0.25s;
-
-  &:hover {
-    color: #646cff;
-  }
-
-  &:focus,
-  &:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
   }
 }
 
@@ -164,6 +156,47 @@ button {
   }
 }
 
+.skills {
+  table {
+    thead {
+      background-color: var(--navegator);    
+    }
+    tbody {
+      tr {
+        td {
+          padding: 0.25rem 0.5rem;
+          img {
+            width: auto;
+            height: 25px;
+            display: block;
+            margin: auto;
+          }
+        }
+
+        &:hover {
+          background-color: var(--secondary)
+        }
+      }
+    }
+
+    tfoot {
+      .paginator {
+        float: right;
+        display: flex;
+        gap: 10px;
+        &__item {
+          background-color: var(--navegator);
+          padding: 0.3rem 1rem;
+          &.--active, &:hover {
+            color: white;
+            background-color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+}
+
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
   .wrapper {
@@ -172,6 +205,19 @@ button {
 
   .h-screen-fix {
     height: calc(100vh - ct.$nav-menu);
+  }
+
+  .skills {
+    table {
+      thead {
+        th {
+          padding: 0.5rem 0.125rem;
+        }
+      }
+      tbody {
+
+      }
+    }
   }
 
   .navegator {
@@ -232,6 +278,18 @@ button {
 
 /* Estilos para desktop */
 @media (min-width: 769px) {
+  .skills {
+    table {
+      thead {
+        position: sticky;
+        top: 0;
+        th {
+          padding: 0.75rem 0.5rem;
+        }
+      }
+    }
+  }
+
   .wrapper {
     margin-left: ct.$nav-desktop-width;
   }
@@ -269,57 +327,5 @@ button {
       object-fit: cover;
       object-position: center;
     }
-  }
-}
-
-.move-up {
-  animation: moveDown .5s linear forwards; /* Aplicar animación */
-}
-
-.move-down {
-  animation: moveUp .5s linear forwards; /* Aplicar animación */
-}
-
-.move-left {
-  animation: moveLeft .5s linear forwards; /* Aplicar animación */
-}
-
-.move-right {
-  animation: moveRight .5s linear forwards; /* Aplicar animación */
-}
-
-@keyframes moveUp {
-  0% {
-    transform: translateY(-105%); /* Empezar en la posición original */
-  }
-  100% {
-    transform: translateY(0%); /* Mover hacia la izquierda */
-  }
-}
-
-@keyframes moveDown {
-  0% {
-    transform: translateY(0); /* Empezar en la posición original */
-  }
-  100% {
-    transform: translateY(-105%); /* Mover hacia la izquierda */
-  }
-}
-
-@keyframes moveLeft {
-  0% {
-    transform: translateX(0); /* Empezar en la posición original */
-  }
-  100% {
-    transform: translateX(-105%); /* Mover hacia la izquierda */
-  }
-}
-
-@keyframes moveRight {
-  0% {
-    transform: translateX(-105%); /* Empezar en la posición original */
-  }
-  100% {
-    transform: translateX(0%); /* Mover hacia la izquierda */
   }
 }

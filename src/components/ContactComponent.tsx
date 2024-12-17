@@ -43,7 +43,7 @@ function ContactComponent({ user, translationLiteral }: ContactProps) {
 
   return (
     <>
-      <div id="contact" className="contact h-screen-fix lg:h-screen">
+      <div id="contact" className="section contact h-screen-fix lg:h-screen" data-title={translationLiteral.contact?.text}>
         <div className="h-full w-full grid grid-cols-1 lg:grid-cols-2 py-14 lg:py-10 px-4 lg:px-32">
           <div className="hidden lg:block">
             {sideImg != null ?
