@@ -7,7 +7,7 @@ function HomeComponent({ user, translationLiteral }: HomeProps) {
     return (
         <>
             <div id="home" className="section h-screen-fix lg:h-screen" data-title={translationLiteral.home?.text}>
-                <div className="w-full h-full font-bold flex justify-center items-center">
+                <div className="section-scroll w-full h-full font-bold flex justify-center items-center">
                     <div className="grid gap-3 text-center">
                         <div className="block m-auto">
                             <div className="avatar">

@@ -41,10 +41,11 @@ export type SkillStackTable = Stack & {
 
 export type TranslationLiteral = {
     home: HomeLiteral,
-    experience: ExperienceLiteral,
+    user: UserLiteral,
     project: ProjectLiteral,
     skills: SkillLiteral,
-    contact: ContactLiteral
+    contact: ContactLiteral,
+    footer: FooterLiteral
 }
 
 export type Snackbard = {
@@ -71,7 +72,9 @@ type Literal = {
 type HomeLiteral = Literal & {
 }
 
-type ExperienceLiteral = Literal & {
+type UserLiteral = Literal & {
+    hackaton: string, 
+    bachelor: string
 }
 
 type ProjectLiteral = Literal & {
@@ -81,9 +84,14 @@ type SkillLiteral = Literal & {
     experience: string,
     proficiency: string,
     list: Array<Skill> | undefined,
-    table: SkillTable
+    table: SkillTable,
+    openGraphic: string,
+    closeGraphic: string,
 }
 
 type ContactLiteral = Literal & {
     snackbard: Snackbard
+}
+
+type FooterLiteral = Literal & {
 }

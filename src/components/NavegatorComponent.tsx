@@ -3,12 +3,12 @@ import {
     faHome,
     faPhone,
     faLightbulb,
-    faBuilding,
     faGear,
     faSun,
     faMoon,
     faTimes,
-    faBars
+    faBars,
+    faUserNinja
 } from '@fortawesome/free-solid-svg-icons'
 import { NavegatorProps } from '../props';
 import { useEffect, useRef, useState } from 'react';
@@ -79,6 +79,10 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                         }
                         
                         setActiveSection(target.id);
+
+                        const item = entry.target as HTMLElement;
+                        const find = item.firstChild as HTMLElement
+                        showText(find, winHeight)
                     }
                 });
             },
@@ -91,12 +95,24 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
         const sections = document.querySelectorAll('.section');
         sections.forEach(section => observer.observe(section));
 
+        const docHeight = document.documentElement.scrollHeight;
+        const winHeight = window.innerHeight;
+        
+
+        const showText = (item: HTMLElement, winHeight:number) => {
+            const rect = item.getBoundingClientRect();
+            if(!item.classList.contains("visible")){
+                
+                if(rect.top <= winHeight){
+                    console.log(item.id)
+                    item.classList.add("visible")
+                }
+            }
+        }
 
         const handleScroll = () => {
             const scrollTop = window.scrollY; 
-            const docHeight = document.documentElement.scrollHeight;
-            const winHeight = window.innerHeight;
-
+            
             if (docHeight <= winHeight) {
                 setProgress(100);
                 return;
@@ -147,12 +163,12 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                                 </a>
                             </li>
                             <li>
-                                <a href="#experience" className={activeSection === 'experience' ? '--active' : ''}>
+                                <a href="#user" className={activeSection === 'user' ? '--active' : ''}>
                                     <div className='icon'>
-                                        <FontAwesomeIcon icon={faBuilding} />
+                                        <FontAwesomeIcon icon={faUserNinja} />
                                     </div>
                                     <div className='title'>
-                                        {trans?.experience.text || <div className="animate-pulse h-3 bg-slate-700 rounded mx-5 mt-2"></div>}
+                                        {trans?.user.text || <div className="animate-pulse h-3 bg-slate-700 rounded mx-5 mt-2"></div>}
                                     </div>
                                 </a>
                             </li>

@@ -13,19 +13,19 @@
 $themes: (
   light: (
     background: cl.$light-background,
-    text: #213547,
+    text: cl.$light-color-letter,
     primary: cl.$light-color-primary-a0,
     secondary: cl.$light-color-secondary-a0,
+    selected: cl.$light-color-primary-a10,
     navegator: cl.$light-navegator,
-    button-bg: #215bf1,
   ),
   dark: (
     background: cl.$dark-background,
     text: cl.$dark-color-letter,
     primary: cl.$dark-color-primary-a20,
+    selected: cl.$dark-color-primary-a10,
     secondary: cl.$dark-color-secondary-a0,
     navegator: cl.$dark-navegator,
-    button-bg: #215bf1,
   )
 );
 
@@ -35,8 +35,8 @@ $themes: (
   --text: #{map.get($theme, text)};
   --navegator: #{map.get($theme, navegator)};
   --primary: #{map.get($theme, primary)};
+  --selected: #{map.get($theme, selected)};
   --secondary: #{map.get($theme, secondary)};
-  --button-bg: #{map.get($theme, button-bg)};
 }
 
 :root.light {
@@ -197,6 +197,19 @@ a {
   }
 }
 
+.section-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+  position: relative;
+}
+
+.section-scroll.visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
   .wrapper {
@@ -278,6 +291,12 @@ a {
 
 /* Estilos para desktop */
 @media (min-width: 769px) {
+
+  .section {
+    max-width: 1244px;
+    margin: auto;
+  }
+
   .skills {
     table {
       thead {

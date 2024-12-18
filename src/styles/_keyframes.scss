@@ -14,6 +14,10 @@
     animation: moveRight .5s linear forwards;
 }
 
+.growShrink {
+    animation: growShrink 1.5s infinite ease-in-out;
+}
+
 @keyframes moveUp {
     0% {
         transform: translateY(-105%);
@@ -51,5 +55,14 @@
 
     100% {
         transform: translateX(0%);
+    }
+}
+
+@keyframes growShrink {
+    0%, 100% {
+      transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+      transform: scale(1.05); /* Agrandarse */
     }
 }

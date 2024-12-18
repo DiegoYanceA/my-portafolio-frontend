@@ -3,8 +3,11 @@ import { WrapperProps } from "../props"
 import ContactComponent from "./ContactComponent";
 import HomeComponent from "./HomeComponent";
 import SkillsComponent from "./SkillsComponent";
+import UserComponent from "./UserComponent";
 
 function WrapperComponent({ information, translationLiteral, preference }: WrapperProps) {
+  const currentYear = new Date().getFullYear();
+
   useEffect(() => {
     const hash = window.location.hash; 
     if(hash != null){
@@ -15,7 +18,6 @@ function WrapperComponent({ information, translationLiteral, preference }: Wrapp
       }
       
     }
-    
   }, [])
   return (
     <>
@@ -27,6 +29,11 @@ function WrapperComponent({ information, translationLiteral, preference }: Wrapp
               translationLiteral={translationLiteral}
               user = {information.user}
             />
+
+            <UserComponent
+              translationLiteral={translationLiteral}
+            >
+            </UserComponent>
 
             <SkillsComponent
               translationLiteral={translationLiteral}
@@ -43,6 +50,14 @@ function WrapperComponent({ information, translationLiteral, preference }: Wrapp
         
         
       </section>
+      <footer>
+        <div className="px-20 pt-5 pb-14">
+          <div className="line"></div>
+          <p>
+            © {currentYear} {information.user.title}. {translationLiteral.footer.text}
+          </p>
+        </div>
+      </footer>
       
     </>
   )

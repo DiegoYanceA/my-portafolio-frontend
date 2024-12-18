@@ -3,8 +3,11 @@
         "text": "Home",
         "description": "Full Stack Programmer"
     },
-    "experience": {
-        "text": "Work experiences"
+    "user": {
+        "text": "About me",
+        "description": "Bachelor's degree in Software Engineering with over 4 years of experience in web development, specializing in both frontend and backend. In 2021, together with my team, I developed an innovative solution that earned us first place in a <a href=\"https://www.facebook.com/hackathonVirtualReactivatePeru\" target=\"_blank\">Virtual Hackathon (#ReactivatePerú)</a>, demonstrating our ability to work under pressure, collaborate effectively, and solve complex problems. Proficient in solving complex challenges and implementing significant improvements for the companies I have worked with. Skilled in various technologies and frameworks, delivering innovative and efficient solutions that optimize processes and create value. I stand out for my proactive approach, strong technical skills, and ability to adapt to dynamic environments.",
+        "hackaton": "Virtual Hackathon",
+        "bachelor": "Bachelor's degree"
     },
     "project": {
         "text": "Projects"
@@ -38,12 +41,17 @@
             "categoryLabel": "Categoría",
             "nameLabel": "Name",
             "yearsLabel": "Years"
-        }
+        },
+        "openGraphic": "Show graphics",
+        "closeGraphic": "Hide graphics"
     },
     "contact": {
         "text": "Get in touch",
         "snackbard": {
             "copy": "Copied!"
         }
+    },
+    "footer":{
+        "text": "All rights reserved"
     }
 }

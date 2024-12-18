@@ -1,3 +1,5 @@
+@use './consts' as ct;
+
 .range-slider {
     height: 5px;
     position: relative;
@@ -94,25 +96,39 @@ button {
     }
     &.btn {
         background-color: var(--primary);
-        width: 1.25rem;
-        height: 1.25rem;
+        color: white;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 0.75rem;
+        border-radius: 10px;
         &--rounded {
+            width: 1.25rem;
+            height: 1.25rem;
             padding: 0px;
             border-radius: 100%;
         }
         &:focus {
-            color: white;
+            background-color: var(--selected);
         }
+    }
+}
+
+footer {
+    color: var(--text);
+    text-align: center;
+    .line {
+        background-color: white;
+        height: 1px;
+        margin-bottom: 1rem;
     }
 }
 
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
+    
+
     h1 {
         font-size: 2.5rem;
     }
@@ -140,6 +156,11 @@ button {
 
 /* Estilos para desktop */
 @media (min-width: 769px) {
+
+    footer {
+        padding-left: ct.$nav-desktop-width;
+        width: 100%;
+    }
 
     h1 {
 

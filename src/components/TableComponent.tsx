@@ -227,7 +227,7 @@ function TableComponent({ skills, translationLiteral }: SkillsTableProps) {
                     </div>
                 </div>
             </div>
-            <table className="mb-10 w-full">
+            <table className="w-full">
                 <thead>
                     <tr>
                         {
@@ -333,7 +333,7 @@ function TableComponent({ skills, translationLiteral }: SkillsTableProps) {
                 <tfoot>
                     <tr>
                         <td colSpan={trans.header.length}>
-                            <div className="flex items-center gap-5 lg:gap-10 justify-center lg:justify-between flex-wrap flex-col-reverse">
+                            <div className="flex items-center gap-5 lg:gap-10 justify-center lg:justify-between flex-wrap flex-col-reverse lg:flex-row">
                                 <div className="flex items-center gap-3">
                                     <div>
                                         Mostrando {startIndex + 1} a {(filterData.length <= rowsPerPage * currentPage) ? filterData.length : rowsPerPage * currentPage} de {filterData.length}
@@ -346,7 +346,7 @@ function TableComponent({ skills, translationLiteral }: SkillsTableProps) {
                                         </select>
                                     </div>
                                 </div>
-                                <div className="paginator w-full justify-center">
+                                <div className="paginator  justify-center">
                                     <button
                                         onClick={() => changePage(currentPage - 1)}
                                         disabled={currentPage === 1}

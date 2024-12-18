@@ -3,8 +3,11 @@
         "text": "Inicio",
         "description": "Programador Full Stack"
     },
-    "experience": {
-        "text": "Experiencia laboral"
+    "user": {
+        "text": "Acerca de mi",
+        "description": "Bachiller en Ingeniería de Software con más de 4 años de experiencia en desarrollo web, especializado en frontend y backend. En 2021, junto con mi equipo, desarrollamos una solución innovadora que nos llevó a ganar el primer puesto en una <a href=\"https://www.facebook.com/hackathonVirtualReactivatePeru\" target=\"_blank\">Hackathon Virtual (#ReactivatePerú)</a>, demostrando nuestra capacidad para trabajar bajo presión, colaborar eficazmente y resolver problemas complejos. Competente en la solución de problemas complejos y en la implementación de mejoras significativas para las empresas en las que he colaborado. Domino diversas tecnologías y frameworks, aportando soluciones innovadoras y eficaces que optimizan procesos y generan valor. Me destaco por mi enfoque proactivo, habilidades técnicas sólidas y capacidad para adaptarme a entornos dinámicos.",
+        "hackaton": "Hackathon Virtual",
+        "bachelor": "Bachiller"
     },
     "project": {
         "text": "Proyectos"
@@ -20,12 +23,17 @@
             "categoryLabel": "Category",
             "nameLabel": "Nombre",
             "yearsLabel": "Años"
-        }
+        },
+        "openGraphic": "Mostrar gráficos",
+        "closeGraphic": "Ocultar gráficos"
     },
     "contact": {
         "text": "Contáctame",
         "snackbard": {
             "copy": "Copiado!"
         }
+    },
+    "footer":{
+        "text": "Todos los derechos reservados"
     }
 }

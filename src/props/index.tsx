@@ -33,3 +33,7 @@ export type ContactProps = {
     user: User,
     translationLiteral: TranslationLiteral
 }
+
+export type UserProps = {
+    translationLiteral: TranslationLiteral
+}
