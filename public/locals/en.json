@@ -10,7 +10,39 @@
         "bachelor": "Bachelor's degree"
     },
     "project": {
-        "text": "Projects"
+        "text": "Projects",
+        "sector": [
+            {
+                "id": 1,
+                "title": "Automobiles"
+            },
+            {
+                "id": 2,
+                "title": "Beauty and Personal Care"
+            },
+            {
+                "id": 3,
+                "title": "Education"
+            },
+            {
+                "id": 4,
+                "title": "Media and Communication"
+            },
+            {
+                "id": 5,
+                "title": "Financial Services"
+            },
+            {
+                "id": 6,
+                "title": "Telecommunications and Technology"
+            },
+            {
+                "id": 7,
+                "title": "Professional Services"
+            }
+        ],
+        "openCard": "Show more",
+        "closeCard": "Show less"
     },
     "skills": {
         "text": "Skills",
@@ -35,11 +67,11 @@
             }
         ],
         "table":{
-            "header":["Logo", "Name",  "Category", "Years of experience", "Work Experience"],
+            "header":["Logo", "Technology",  "Category", "Years of experience", "Work Experience"],
             "experienceLabel": "Job Experience",
             "experienceOptions": ["All", "With experience", "Without experience"],
-            "categoryLabel": "Categoría",
-            "nameLabel": "Name",
+            "categoryLabel": "Category",
+            "nameLabel": "Technology",
             "yearsLabel": "Years"
         },
         "openGraphic": "Show graphics",

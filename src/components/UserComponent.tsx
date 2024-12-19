@@ -4,10 +4,6 @@ import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 
 function UserComponent({ translationLiteral }: UserProps) {
     const trans = translationLiteral.user;
-
-    const goTo = (url: string) => {
-        window.open(url, "_blank");
-    }
     
     return (
         <>
@@ -18,14 +14,14 @@ function UserComponent({ translationLiteral }: UserProps) {
                         
                         <p className='text-sm lg:text-lg scroll-text' dangerouslySetInnerHTML={{ __html: trans.description }}></p>
                         <div className='mt-4 flex flex-col lg:flex-row justify-center items-center gap-y-5 lg:gap-x-20 flex-wrap lg:flex-nowrap'>
-                            <button onClick={() => {goTo("./pdf/hackathon-diego.pdf")}} className='btn growShrink'>
+                            <a href='./pdf/hackathon-diego.pdf' className='btn growShrink' target='_blank'>
                                 <span className='text-base'>{trans.hackaton} &nbsp;</span> 
                                 <FontAwesomeIcon className='text-base' icon={faFilePdf}></FontAwesomeIcon>
-                            </button>
-                            <button onClick={() => {goTo("./pdf/bachiller-diego.pdf")}} className='btn growShrink'>
+                            </a>
+                            <a href='./pdf/bachiller-diego.pdf' className='btn growShrink' target='_blank'>
                                 <span className='text-base'>{trans.bachelor} &nbsp;</span> 
                                 <FontAwesomeIcon className='text-base' icon={faFilePdf}></FontAwesomeIcon>
-                            </button>
+                            </a>
                         </div>
                     </div>
                     

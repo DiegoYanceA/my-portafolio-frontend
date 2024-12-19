@@ -112,11 +112,11 @@ function SkillsComponent({ skills, translationLiteral, isDark }: SkillsProps) {
 
 
     return (
-        <div id="skills" className="section skills" data-title={trans?.text}>
+        <div id="skills" className="section skills py-10" data-title={trans?.text}>
             <div className="section-scroll ">
                 <div className="mb-10">
-                    <div className="w-full mb-5">
-                        <h2 className="font-bold text-center">{trans?.text}</h2>
+                    <div className="w-full">
+                        <h2 className="font-bold text-center mb-10">{trans?.text}</h2>
                     </div>
 
                     <div>

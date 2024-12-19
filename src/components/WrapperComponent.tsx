@@ -4,6 +4,7 @@ import ContactComponent from "./ContactComponent";
 import HomeComponent from "./HomeComponent";
 import SkillsComponent from "./SkillsComponent";
 import UserComponent from "./UserComponent";
+import ProjectsComponent from "./ProjectsComponent";
 
 function WrapperComponent({ information, translationLiteral, preference }: WrapperProps) {
   const currentYear = new Date().getFullYear();
@@ -21,7 +22,7 @@ function WrapperComponent({ information, translationLiteral, preference }: Wrapp
   }, [])
   return (
     <>
-      <section className="wrapper px-2 lg:px-20">
+      <section className="wrapper px-4 lg:px-20">
         {
           information != null &&
           <>
@@ -34,6 +35,11 @@ function WrapperComponent({ information, translationLiteral, preference }: Wrapp
               translationLiteral={translationLiteral}
             >
             </UserComponent>
+
+            <ProjectsComponent
+              trans={translationLiteral.project}
+              projects={information.projects}
+            ></ProjectsComponent>
 
             <SkillsComponent
               translationLiteral={translationLiteral}
@@ -51,9 +57,9 @@ function WrapperComponent({ information, translationLiteral, preference }: Wrapp
         
       </section>
       <footer>
-        <div className="px-20 pt-5 pb-14">
+        <div className="px-5 lg:px-20 pt-2 lg:pt-5 pb-8 lg:pb-14">
           <div className="line"></div>
-          <p>
+          <p className="text-sm lg:text-base px-4 lg:px-0">
             © {currentYear} {information.user.title}. {translationLiteral.footer.text}
           </p>
         </div>

@@ -104,7 +104,6 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
             if(!item.classList.contains("visible")){
                 
                 if(rect.top <= winHeight){
-                    console.log(item.id)
                     item.classList.add("visible")
                 }
             }

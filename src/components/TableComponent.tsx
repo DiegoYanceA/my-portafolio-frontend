@@ -118,8 +118,8 @@ function TableComponent({ skills, translationLiteral }: SkillsTableProps) {
         setExpandedRow((prev) => (prev === rowId ? null : rowId));
     };
 
-    const swiper = useRef<HTMLTableSectionElement  | null>(null);
-    
+    const swiper = useRef<HTMLTableSectionElement | null>(null);
+
 
     useEffect(() => {
         let startX = 0;
@@ -130,14 +130,14 @@ function TableComponent({ skills, translationLiteral }: SkillsTableProps) {
             if (Math.abs(deltaX) > 50) {
                 if (deltaX > 0) {
                     setCurrentPage(c => {
-                        if(1 <= c - 1){
+                        if (1 <= c - 1) {
                             return c - 1;
                         }
                         return c;
                     })
                 } else {
                     setCurrentPage(c => {
-                        if(c + 1 <= totalPages) {
+                        if (c + 1 <= totalPages) {
                             return c + 1;
                         }
                         return c;
@@ -153,28 +153,28 @@ function TableComponent({ skills, translationLiteral }: SkillsTableProps) {
         const handleTouchEnd = (e: TouchEvent) => {
             endX = e.changedTouches[0].clientX;
             handleSwipe();
-        }; 
+        };
 
-        if(swiper != null && swiper.current != null){
-            
+        if (swiper != null && swiper.current != null) {
+
             swiper.current.addEventListener("touchstart", handleTouchStart);
-            swiper.current.addEventListener("touchend", handleTouchEnd);    
+            swiper.current.addEventListener("touchend", handleTouchEnd);
         }
 
         return () => {
             if (swiper.current != null) {
-              swiper.current.removeEventListener("touchstart", handleTouchStart);
-              swiper.current.removeEventListener("touchend", handleTouchEnd);
+                swiper.current.removeEventListener("touchstart", handleTouchStart);
+                swiper.current.removeEventListener("touchend", handleTouchEnd);
             }
         };
-        
+
     }, [])
 
-    
+
 
     return (
         <>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-5 lg:mb-5 mb-10 gap-y-5 lg:gap-y-0 px-5 lg:px-0">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-5 lg:mb-5 mb-10 gap-y-5 lg:gap-y-0 lg:px-0">
                 <div className="lg:col-span-4">
                     <label htmlFor="nameFilter">{trans.nameLabel}</label>
                     <input id="nameFilter" className="w-full" onChange={handleTextFilterChange} type="text" value={textFilter} />
@@ -209,7 +209,7 @@ function TableComponent({ skills, translationLiteral }: SkillsTableProps) {
                     </select>
                 </div>
 
-                <div className="lg:col-span-2">
+                <div className="lg:col-span-2 px-2">
                     <div className="block w-full mb-3">
                         {trans.yearsLabel}: {minValue + 1} - {maxValue + 1}
                     </div>
@@ -268,7 +268,7 @@ function TableComponent({ skills, translationLiteral }: SkillsTableProps) {
                     }
 
                 </tbody>
-                <tbody ref={swiper} className="lg:hidden testtest">
+                <tbody ref={swiper} className="lg:hidden">
                     {
                         currentData.map((item, index) => {
                             return (
@@ -297,31 +297,28 @@ function TableComponent({ skills, translationLiteral }: SkillsTableProps) {
                                                 </button>
                                             </div>
                                         </div>
-                                        {
-                                            index == expandedRow &&
-                                            <div className="grid grid-cols-4 py-3">
-                                                <div className="col-span-2">
-                                                    {trans.header[2]}:
-                                                </div>
-                                                <div className="col-span-2">
-                                                    {item.category}
-                                                </div>
-                                                <div className="col-span-2">
-                                                    {trans.header[3]}:
-                                                </div>
-                                                <div className="col-span-2">
-                                                    {item.year}
-                                                </div>
-                                                <div className="col-span-2">
-                                                    {trans.header[4]}:
-                                                </div>
-                                                <div className="col-span-2">
-                                                    {item.experience ?
-                                                        <FontAwesomeIcon className="text-green-500" icon={faCircleCheck}></FontAwesomeIcon> :
-                                                        <FontAwesomeIcon className="text-red-500" icon={faCircleXmark}></FontAwesomeIcon>}
-                                                </div>
+                                        <div className={`grid grid-cols-4 py-3 content ${index == expandedRow?"visible": ""}`}>
+                                            <div className="col-span-2">
+                                                {trans.header[2]}:
                                             </div>
-                                        }
+                                            <div className="col-span-2">
+                                                {item.category}
+                                            </div>
+                                            <div className="col-span-2">
+                                                {trans.header[3]}:
+                                            </div>
+                                            <div className="col-span-2">
+                                                {item.year}
+                                            </div>
+                                            <div className="col-span-2">
+                                                {trans.header[4]}:
+                                            </div>
+                                            <div className="col-span-2">
+                                                {item.experience ?
+                                                    <FontAwesomeIcon className="text-green-500" icon={faCircleCheck}></FontAwesomeIcon> :
+                                                    <FontAwesomeIcon className="text-red-500" icon={faCircleXmark}></FontAwesomeIcon>}
+                                            </div>
+                                        </div>
 
                                     </td>
                                 </tr>

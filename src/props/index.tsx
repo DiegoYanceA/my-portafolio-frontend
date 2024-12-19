@@ -1,4 +1,4 @@
-import { Information, Preference, Skill, TranslationLiteral, User } from "../types"
+import { Information, Preference, ProjectLiteral, Projects, Skill, TranslationLiteral, User } from "../types"
 
 export type NavegatorProps = {
     preference: Preference, 
@@ -36,4 +36,9 @@ export type ContactProps = {
 
 export type UserProps = {
     translationLiteral: TranslationLiteral
+}
+
+export type ProjectProps = {
+    projects: Array<Projects>,
+    trans: ProjectLiteral
 }

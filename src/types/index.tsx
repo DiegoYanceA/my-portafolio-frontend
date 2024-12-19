@@ -11,14 +11,33 @@ export type Preference = {
 
 export type Information = {
     user: User,
-    skills: Array<Skill>
+    skills: Array<Skill>,
+    projects: Array<Projects>
 }
 
 export type User = {
     title: string,
     linkedin: string,
     github: string,
-    email: string
+    email: string,
+}
+
+export type Projects = {
+    title: string,
+    technologies: Array<string>,
+    live: string,
+    image: string,
+    rol: string,
+    sector: number
+}
+
+export type CardProject = Projects & {
+    sectorName: string
+}
+
+export type Sector = {
+    title: string,
+    id: number
 }
 
 export type Skill = {
@@ -77,7 +96,10 @@ type UserLiteral = Literal & {
     bachelor: string
 }
 
-type ProjectLiteral = Literal & {
+export type ProjectLiteral = Literal & {
+    sector: Array<Sector>,
+    openCard: string,
+    closeCard: string
 }
 
 type SkillLiteral = Literal & {

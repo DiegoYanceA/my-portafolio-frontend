@@ -10,18 +10,50 @@
         "bachelor": "Bachiller"
     },
     "project": {
-        "text": "Proyectos"
+        "text": "Proyectos",
+        "sector": [
+            {
+                "id": 1,
+                "title": "Automóviles"
+            },
+            {
+                "id": 2,
+                "title": "Belleza y cuidado personal"
+            },
+            {
+                "id": 3,
+                "title": "Educación"
+            },
+            {
+                "id": 4,
+                "title": "Medios de comunicación"
+            },
+            {
+                "id": 5,
+                "title": "Servicios Financieros"
+            },
+            {
+                "id": 6,
+                "title": "Telecomunicaciones y tecnología"
+            },
+            {
+                "id": 7,
+                "title": "Servicios Profesionales"
+            }
+        ],
+        "openCard": "Mostrar más",
+        "closeCard": "Mostrar menos"
     },
     "skills": {
         "text": "Habilidades",
         "experience": "Comparativa de años de experiencia por",
         "proficiency": "Comparativa de años de competencias en formación por",
         "table":{
-            "header":["Logo", "Nombre", "Categoría", "Años de experiencia", "Experiencia laboral"],
+            "header":["Logo", "Tecnología", "Categoría", "Años de experiencia", "Experiencia laboral"],
             "experienceLabel": "Experiencia Laboral",
             "experienceOptions": ["Todos", "Con experiencia", "Sin experiencia"],
-            "categoryLabel": "Category",
-            "nameLabel": "Nombre",
+            "categoryLabel": "Categoría",
+            "nameLabel": "Tecnología",
             "yearsLabel": "Años"
         },
         "openGraphic": "Mostrar gráficos",
