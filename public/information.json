@@ -96,7 +96,7 @@
         },
         {
             "title": "Rotafono - CMS Rotafono",
-            "technologies": ["Html5", "CSS", "Javascript", "JQuery", "Angular.js", "Phalcon", "MongoDB", "Git"],
+            "technologies": ["Html5", "CSS", "Javascript", "JQuery", "Angular.js", "PHP", "Phalcon", "MongoDB", "Git"],
             "live": "https://rotafono.pe/",
             "image": "./projects/rotafono.png",
             "rol": "Full Stack",
@@ -112,7 +112,7 @@
         },
         {
             "title": "Bdo Apps",
-            "technologies": ["Html5", "CSS", "Javascript", "JQuery", "Php", "Laravel", "PostgreSQL", "Git", "Dapper"],
+            "technologies": ["Html5", "CSS", "Javascript", "JQuery", "PHP", "Laravel", "PostgreSQL", "Git", "Dapper"],
             "live": "https://ti.bdooutsourcing.com.pe/BDOapps",
             "image": "./projects/bdo.png",
             "rol": "Full Stack",
@@ -144,7 +144,7 @@
         },
         {
             "title": "Santillana Digital",
-            "technologies": ["Html5", "CSS", "Javascript", "C#", "JQuery", "Vue.js", ".NET Framework 4.8", "Phaser.js", "Express.js", "Node.js", "Bitbucket", "Git", "SQL server", "Entity Framework"],
+            "technologies": ["Html5", "CSS", "Javascript", "C#", "JQuery", "Vue.js", ".NET Framework 4.8", "Phaser.js", "Express.js", "Node.js", "Bitbucket", "Git", "SQL server", "MySQL", "Entity Framework", "CodeIgniter"],
             "live": "https://digital.santillana.com.pe",
             "image": "./projects/santillana-digital.png",
             "rol": "Full Stack",
@@ -166,14 +166,14 @@
                 },
                 {
                     "title": "Typescript",
-                    "year": 4,
+                    "year": 2,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/ts.png"
                 },
                 {
                     "title": "PHP",
-                    "year": 3,
+                    "year": 2,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/php.png"
@@ -201,14 +201,14 @@
                 },
                 {
                     "title": "Java",
-                    "year": 2,
+                    "year": 1,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/java.png"
                 },
                 {
                     "title": "Python",
-                    "year": 2,
+                    "year": 1,
                     "month": 0,
                     "experience": false,
                     "logo": "./technology/python.webp"
@@ -235,7 +235,7 @@
                 },
                 {
                     "title": "Vue.js",
-                    "year": 2,
+                    "year": 1,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/vuejs.png"
@@ -256,7 +256,7 @@
                 },
                 {
                     "title": "JQuery",
-                    "year": 4,
+                    "year": 3,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/jquery.png"
@@ -283,7 +283,7 @@
                 },
                 {
                     "title": ".Net Core 8",
-                    "year": 2,
+                    "year": 3,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/netcore.png"
@@ -399,7 +399,7 @@
                 },
                 {
                     "title": "Node.js",
-                    "year": 4,
+                    "year": 2,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/nodejs.svg"
@@ -448,7 +448,7 @@
                 },
                 {
                     "title": "Azure Cloud",
-                    "year": 3,
+                    "year": 1,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/azure.webp"

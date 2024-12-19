@@ -99,7 +99,10 @@ type UserLiteral = Literal & {
 export type ProjectLiteral = Literal & {
     sector: Array<Sector>,
     openCard: string,
-    closeCard: string
+    closeCard: string,
+    liveText: string,
+    nameLabel: string,
+    sectorLabel: string
 }
 
 type SkillLiteral = Literal & {

@@ -13,6 +13,10 @@
         "text": "Proyectos",
         "sector": [
             {
+                "id": 0,
+                "title": "Todos"
+            },
+            {
                 "id": 1,
                 "title": "Automóviles"
             },
@@ -42,7 +46,10 @@
             }
         ],
         "openCard": "Mostrar más",
-        "closeCard": "Mostrar menos"
+        "closeCard": "Mostrar menos",
+        "liveText": "En vivo",
+        "nameLabel": "Tecnología",
+        "sectorLabel": "Rubro"
     },
     "skills": {
         "text": "Habilidades",
