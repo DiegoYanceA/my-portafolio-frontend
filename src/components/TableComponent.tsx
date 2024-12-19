@@ -80,8 +80,12 @@ function TableComponent({ skills, translationLiteral }: SkillsTableProps) {
         setCategoryFilter(e.target.value);
     }
 
+    function escapeRegExp(text: string) {
+        return text.replace(/[.*+?^=!:${}()|\[\]\/\\]/g, '\\$&');
+    }    
+
     function filter(item: SkillStackTable) {
-        const regex = new RegExp(textFilter, "gi");
+        const regex = new RegExp(escapeRegExp(textFilter), "gi");
         const whichExperience = () => {
             switch (experienceFilter) {
                 case 0: return true;

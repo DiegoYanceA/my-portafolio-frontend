@@ -37,9 +37,13 @@ function ProjectsComponent({ trans, projects }: ProjectProps) {
         setSectorFilter(parseInt(e.target.value));
     }
 
+    function escapeRegExp(text: string) {
+        return text.replace(/[.*+?^=!:${}()|\[\]\/\\]/g, '\\$&');
+    }   
+
     function filter(data: CardProject){
 
-        const regex = new RegExp(textFilter, "gi"); 
+        const regex = new RegExp(escapeRegExp(textFilter), "gi");
         const filteredArray = data.technologies.filter(item => regex.test(item));
         return 0 < filteredArray.length && (sectorFilter == 0 || sectorFilter == data.sector);
     }
@@ -64,7 +68,6 @@ function ProjectsComponent({ trans, projects }: ProjectProps) {
                         <div className="lg:col-span-4">
                             <label htmlFor="nameFilter">{trans.nameLabel}</label>
                             <input id="nameFilter" className="w-full" onChange={handleTextFilterChange} type="text"/>
-                            {textFilter}
                         </div>
 
                         <div className="lg:col-span-3">

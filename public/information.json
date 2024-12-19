@@ -96,7 +96,7 @@
         },
         {
             "title": "Rotafono - CMS Rotafono",
-            "technologies": ["Html5", "CSS", "Javascript", "JQuery", "Angular.js", "PHP", "Phalcon", "MongoDB", "Git"],
+            "technologies": ["Html5", "CSS", "Javascript", "Sass", "Typescript", "JQuery", "Angular.js", "PHP", "Phalcon", "MongoDB", "Git"],
             "live": "https://rotafono.pe/",
             "image": "./projects/rotafono.png",
             "rol": "Full Stack",
@@ -104,7 +104,7 @@
         },
         {
             "title": "Smartsys",
-            "technologies": ["Html5", "CSS", "Javascript", "JQuery", "C#", "Dotnet 8", ".NET Framework 4.8", "Angular.js", "PostgreSQL", "Git", "Bitbucket", "Node.js"],
+            "technologies": ["Html5", "CSS", "Sass", "Typescript" , "Javascript", "JQuery", "C#", "Dotnet 8", ".NET Framework 4.8", "Angular.js", "PostgreSQL", "Git", "Bitbucket", "Node.js"],
             "live": "https://www.smartsys.com.pe/",
             "image": "./projects/smartsys.png",
             "rol": "Full Stack",
@@ -219,6 +219,27 @@
             "id": 2,
             "title": "Frontend",
             "stacks": [
+                {
+                    "title": "Html5",
+                    "year": 4,
+                    "month": 0,
+                    "experience": true,
+                    "logo": "./technology/html.webp"
+                },
+                {
+                    "title": "CSS",
+                    "year": 4,
+                    "month": 0,
+                    "experience": true,
+                    "logo": "./technology/css.svg"
+                },
+                {
+                    "title": "Sass",
+                    "year": 4,
+                    "month": 0,
+                    "experience": true,
+                    "logo": "./technology/sass.png"
+                },
                 {
                     "title": "Angular",
                     "year": 3,
@@ -427,7 +448,7 @@
                 },
                 {
                     "title": "Git",
-                    "year": 3,
+                    "year": 4,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/git.png"
@@ -448,7 +469,7 @@
                 },
                 {
                     "title": "Azure Cloud",
-                    "year": 1,
+                    "year": 2,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/azure.webp"
