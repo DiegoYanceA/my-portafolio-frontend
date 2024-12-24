@@ -27,12 +27,12 @@ function WrapperComponent({ information, translationLiteral, preference }: Wrapp
           information != null &&
           <>
             <HomeComponent 
-              translationLiteral={translationLiteral}
+              trans={translationLiteral.home}
               user = {information.user}
             />
 
             <UserComponent
-              translationLiteral={translationLiteral}
+              trans={translationLiteral.user}
             >
             </UserComponent>
 
@@ -42,14 +42,14 @@ function WrapperComponent({ information, translationLiteral, preference }: Wrapp
             ></ProjectsComponent>
 
             <SkillsComponent
-              translationLiteral={translationLiteral}
+              trans={translationLiteral.skills}
               skills = {information.skills}
               isDark = {preference?.dark}
             />
 
             <ContactComponent
               user = {information.user}
-              translationLiteral={translationLiteral}
+              trans={translationLiteral.contact}
             />
           </>
         }

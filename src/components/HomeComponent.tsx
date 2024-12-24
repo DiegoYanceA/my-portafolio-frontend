@@ -1,12 +1,10 @@
 import { HomeProps } from "../props"
 import perfilImg from '../assets/perfil.jpg'
 
-function HomeComponent({ user, translationLiteral }: HomeProps) {
-    let trans = translationLiteral;
-
+function HomeComponent({ user, trans }: HomeProps) {
     return (
         <>
-            <div id="home" className="section h-screen-fix lg:h-screen" data-title={translationLiteral.home?.text}>
+            <div id="home" className="section h-screen-fix lg:h-screen" data-title={trans?.text}>
                 <div className="section-scroll w-full h-full font-bold flex justify-center items-center">
                     <div className="grid gap-3 text-center">
                         <div className="block m-auto">
@@ -26,7 +24,7 @@ function HomeComponent({ user, translationLiteral }: HomeProps) {
                             }
                         </h1>
                         <p>
-                            {trans?.home.description}
+                            {trans.description}
                         </p>
                         <div className="flex justify-around w-full">
                             <a className="underline" target="_blank" href={user?.linkedin}>Linkedin</a>

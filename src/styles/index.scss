@@ -240,9 +240,6 @@ $themes: (
     }
   }
 
-  &:hover {
-    transform: scale(1.05);
-  }
 }
 
 .btn {
@@ -393,6 +390,12 @@ $themes: (
 
 /* Estilos para desktop */
 @media (min-width: 769px) {
+
+  .card {
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 
   .section {
     max-width: 1244px;

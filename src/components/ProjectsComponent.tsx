@@ -66,13 +66,13 @@ function ProjectsComponent({ trans, projects }: ProjectProps) {
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-5 lg:mb-5 mb-10 gap-y-5 lg:gap-y-0 lg:px-0">
                         <div className="lg:col-span-4">
-                            <label htmlFor="nameFilter">{trans.nameLabel}</label>
-                            <input id="nameFilter" className="w-full" onChange={handleTextFilterChange} type="text"/>
+                            <label htmlFor="nameProjectFilter">{trans.nameLabel}</label>
+                            <input id="nameProjectFilter" className="w-full" onChange={handleTextFilterChange} type="text"/>
                         </div>
 
                         <div className="lg:col-span-3">
-                            <label htmlFor="categoryFilter">{trans.sectorLabel}</label>
-                            <select id="categoryFilter" className="w-full" onChange={handleSectorFilterChange}>
+                            <label htmlFor="sectorFilter">{trans.sectorLabel}</label>
+                            <select id="sectorFilter" className="w-full" onChange={handleSectorFilterChange}>
                                 {
                                     trans.sector.map((item, index) => (
                                         <option value={item.id} key={`option-filter-sector-${index}`}>

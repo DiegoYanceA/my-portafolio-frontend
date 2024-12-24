@@ -5,7 +5,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { OptionsObject, SnackbarKey, useSnackbar } from "notistack"
 import sideImg from '../assets/side.jpg'
 
-function ContactComponent({ user, translationLiteral }: ContactProps) {
+function ContactComponent({ user, trans }: ContactProps) {
 
   const action = (snackbarId: SnackbarKey) => (
     <>
@@ -32,7 +32,7 @@ function ContactComponent({ user, translationLiteral }: ContactProps) {
   const copyText = (text: string) => {
     navigator.clipboard.writeText(text)
       .then(() => {
-        enqueueSnackbar(translationLiteral.contact.snackbard.copy, options)
+        enqueueSnackbar(trans.snackbard.copy, options)
       })
       .catch(err => {
         console.error("Error al copiar el texto: ", err);
@@ -43,7 +43,7 @@ function ContactComponent({ user, translationLiteral }: ContactProps) {
 
   return (
     <>
-      <div id="contact" className="section contact h-screen-fix lg:h-screen justify-center flex" data-title={translationLiteral.contact?.text}>
+      <div id="contact" className="section contact h-screen-fix lg:h-screen justify-center flex" data-title={trans?.text}>
         <div className="section-scroll contact__container h-full w-full grid grid-cols-1 lg:grid-cols-12 py-14 lg:py-10 px-4 lg:px-32">
           <div className="hidden lg:block lg:col-span-5">
             {sideImg != null ?
@@ -53,7 +53,7 @@ function ContactComponent({ user, translationLiteral }: ContactProps) {
           <div className="contact__information rounded-r-lg lg:col-span-7 p-3 lg:p-0">
             <div className="grid grid-cols-1 content-center h-full gap-y-5">
               <div>
-                <h2 className="font-bold text-center">{translationLiteral.contact?.text}</h2>
+                <h2 className="font-bold text-center">{trans?.text}</h2>
               </div>
               <div className="grid grid-cols-1 gap-y-6 items-center lg:grid-cols-1 text-center lg:gap-y-4 text-1xl">
                 <div className="flex flex-row flex-wrap gap-x-3 lg:gap-y-0 lg:gap-x-5 justify-center">

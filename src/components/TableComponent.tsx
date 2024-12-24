@@ -4,8 +4,7 @@ import { faChevronLeft, faChevronRight, faCircleCheck, faCircleXmark, faMinus, f
 import { useEffect, useMemo, useRef, useState } from "react";
 import { SkillStackTable } from "../types";
 
-function TableComponent({ skills, translationLiteral }: SkillsTableProps) {
-    const trans = translationLiteral.skills.table;
+function TableComponent({ skills, trans }: SkillsTableProps) {
     const [category, _] = useState<Array<string>>(initCategory);
     const [categoryFilter, setCategoryFilter] = useState('*');
     const [textFilter, setTextFilter] = useState('');
@@ -174,14 +173,12 @@ function TableComponent({ skills, translationLiteral }: SkillsTableProps) {
 
     }, [])
 
-
-
     return (
         <>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-5 lg:mb-5 mb-10 gap-y-5 lg:gap-y-0 lg:px-0">
                 <div className="lg:col-span-4">
-                    <label htmlFor="nameFilter">{trans.nameLabel}</label>
-                    <input id="nameFilter" className="w-full" onChange={handleTextFilterChange} type="text" value={textFilter} />
+                    <label htmlFor="nameTableFilter">{trans.nameLabel}</label>
+                    <input id="nameTableFilter" className="w-full" onChange={handleTextFilterChange} type="text" value={textFilter} />
                 </div>
 
                 <div className="lg:col-span-3">

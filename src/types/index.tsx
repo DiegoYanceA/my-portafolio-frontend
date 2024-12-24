@@ -88,10 +88,10 @@ type Literal = {
     description: string
 }
 
-type HomeLiteral = Literal & {
+export type HomeLiteral = Literal & {
 }
 
-type UserLiteral = Literal & {
+export type UserLiteral = Literal & {
     hackaton: string, 
     bachelor: string
 }
@@ -105,7 +105,7 @@ export type ProjectLiteral = Literal & {
     sectorLabel: string
 }
 
-type SkillLiteral = Literal & {
+export type SkillLiteral = Literal & {
     experience: string,
     proficiency: string,
     list: Array<Skill> | undefined,
@@ -114,9 +114,9 @@ type SkillLiteral = Literal & {
     closeGraphic: string,
 }
 
-type ContactLiteral = Literal & {
+export type ContactLiteral = Literal & {
     snackbard: Snackbard
 }
 
-type FooterLiteral = Literal & {
+export type FooterLiteral = Literal & {
 }

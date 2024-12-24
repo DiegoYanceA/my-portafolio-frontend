@@ -31,8 +31,7 @@ const options = {
 
 };
 
-function SkillsComponent({ skills, translationLiteral, isDark }: SkillsProps) {
-    const trans = translationLiteral.skills;
+function SkillsComponent({ skills, trans, isDark }: SkillsProps) {
     const [openGraphic, setOpenGraphic] = useState(false)
 
     const experience = skills.map(skill => ({
@@ -122,7 +121,7 @@ function SkillsComponent({ skills, translationLiteral, isDark }: SkillsProps) {
                     <div>
                         <TableComponent
                             skills={skills}
-                            translationLiteral={translationLiteral}
+                            trans={trans.table}
                         />
                     </div>
                 </div>

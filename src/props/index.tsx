@@ -1,4 +1,4 @@
-import { Information, Preference, ProjectLiteral, Projects, Skill, TranslationLiteral, User } from "../types"
+import { ContactLiteral, HomeLiteral, Information, Preference, ProjectLiteral, Projects, Skill, SkillLiteral, SkillTable, TranslationLiteral, User, UserLiteral } from "../types"
 
 export type NavegatorProps = {
     preference: Preference, 
@@ -14,28 +14,28 @@ export type WrapperProps = {
 }
 
 export type HomeProps = {
-    translationLiteral: TranslationLiteral,
+    trans: HomeLiteral,
     user: User
 }
 
 export type SkillsProps = {
-    translationLiteral: TranslationLiteral,
+    trans: SkillLiteral,
     skills: Array<Skill>,
     isDark: boolean
 }
 
 export type SkillsTableProps = {
-    translationLiteral: TranslationLiteral,
+    trans: SkillTable,
     skills: Array<Skill>
 }
 
 export type ContactProps = {
     user: User,
-    translationLiteral: TranslationLiteral
+    trans: ContactLiteral
 }
 
 export type UserProps = {
-    translationLiteral: TranslationLiteral
+    trans: UserLiteral
 }
 
 export type ProjectProps = {

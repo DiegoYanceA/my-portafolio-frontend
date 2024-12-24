@@ -2,8 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { UserProps } from '../props';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 
-function UserComponent({ translationLiteral }: UserProps) {
-    const trans = translationLiteral.user;
+function UserComponent({ trans }: UserProps) {
     
     return (
         <>
