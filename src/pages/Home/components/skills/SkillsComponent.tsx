@@ -31,7 +31,7 @@ const options = {
 
 };
 
-function SkillsComponent({ skills, trans, isDark }: SkillsProps) {
+function SkillsComponent({ skills, trans, isDark }: Readonly<SkillsProps>) {
     const [openGraphic, setOpenGraphic] = useState(false)
 
     const experience = skills.map(skill => ({

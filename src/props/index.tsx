@@ -1,45 +1,45 @@
 import { ContactLiteral, HomeLiteral, Information, Option, Preference, ProjectLiteral, Projects, Skill, SkillLiteral, SkillTable, TranslationLiteral, User, UserLiteral } from "../types"
 
 export type NavegatorProps = {
-    readonly preference: Preference, 
-    readonly translationLiteral: TranslationLiteral | undefined ,
-    readonly changeLang: (lang:string) => void,
-    readonly changeThemeMode: (mode:boolean) => void
+    preference: Preference, 
+    translationLiteral: TranslationLiteral | undefined ,
+    changeLang: (lang:string) => void,
+    changeThemeMode: (mode:boolean) => void
 }
 
-export type WrapperProps = {
-    readonly translationLiteral: TranslationLiteral,
-    readonly information: Information,
-    readonly preference: Preference,
+export type HomePageProps = {
+    translationLiteral: TranslationLiteral,
+    information: Information,
+    preference: Preference,
 }
 
 export type HomeProps = {
-    readonly trans: HomeLiteral,
-    readonly user: User
+    trans: HomeLiteral,
+    user: User
 }
 
 export type SkillsProps = {
-    readonly trans: SkillLiteral,
-    readonly skills: Array<Skill>,
-    readonly isDark: boolean
+    trans: SkillLiteral,
+    skills: Array<Skill>,
+    isDark: boolean
 }
 
 export type SkillsTableProps = {
-    readonly trans: SkillTable,
-    readonly categories: Array<Option>
-    readonly skills: Array<Skill>
+    trans: SkillTable,
+    categories: Array<Option>
+    skills: Array<Skill>
 }
 
 export type ContactProps = {
-    readonly user: User,
-    readonly trans: ContactLiteral
+    user: User,
+    trans: ContactLiteral
 }
 
 export type UserProps = {
-    readonly trans: UserLiteral
+    trans: UserLiteral
 }
 
 export type ProjectProps = {
-    readonly projects: Array<Projects>,
-    readonly trans: ProjectLiteral
+    projects: Array<Projects>,
+    trans: ProjectLiteral
 }

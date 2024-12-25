@@ -13,7 +13,7 @@ import {
 import { NavegatorProps } from '../../props';
 import { useEffect, useRef, useState } from 'react';
 
-function NavegatorComponent({ preference, translationLiteral, changeLang, changeThemeMode }: NavegatorProps) {
+function NavegatorComponent({ preference, translationLiteral, changeLang, changeThemeMode }: Readonly<NavegatorProps>) {
     let isDark = preference?.dark;
     let lang = preference?.lang;
     let trans = translationLiteral;

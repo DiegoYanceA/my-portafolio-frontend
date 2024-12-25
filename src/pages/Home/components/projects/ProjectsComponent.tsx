@@ -6,7 +6,7 @@ import { CardProject } from "../../../../types";
 import { escapeRegExp } from "../../../../utils/RegexUtil";
 
 
-function ProjectsComponent({ trans, projects }: ProjectProps) {
+function ProjectsComponent({ trans, projects }: Readonly<ProjectProps>) {
     const [showMoreData, setShowMoreData] = useState(false)
     const data = useMemo<Array<CardProject>>(initData, [trans]);
     const [showDate, setShowData] = useState<Array<CardProject>>(initShowDate)
@@ -131,18 +131,16 @@ function ProjectsComponent({ trans, projects }: ProjectProps) {
                 </div>
                 {
                     5 < showDate.length &&
-                    <>
-                        <div className="w-100 flex justify-center pt-10">
-                            <button className="btn gap-x-2 growShrink" onClick={() => setShowMoreData(!showMoreData)}>
-                                <span className="text-base">
-                                    {showMoreData ? trans.closeCard : trans.openCard}
-                                </span>
-                                <FontAwesomeIcon className='text-base'
-                                    icon={showMoreData ? faEyeSlash : faEye}
-                                ></FontAwesomeIcon>
-                            </button>
-                        </div>
-                    </>
+                    <div className="w-100 flex justify-center pt-10">
+                        <button className="btn gap-x-2 growShrink" onClick={() => setShowMoreData(!showMoreData)}>
+                            <span className="text-base">
+                                {showMoreData ? trans.closeCard : trans.openCard}
+                            </span>
+                            <FontAwesomeIcon className='text-base'
+                                icon={showMoreData ? faEyeSlash : faEye}
+                            ></FontAwesomeIcon>
+                        </button>
+                    </div>
                 }
             </div>
 

@@ -5,7 +5,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { OptionsObject, SnackbarKey, useSnackbar } from "notistack"
 import sideImg from '../../../../assets/side.jpg'
 
-function ContactComponent({ user, trans }: ContactProps) {
+function ContactComponent({ user, trans }: Readonly<ContactProps>) {
 
   const action = (snackbarId: SnackbarKey) => (
     <button className="focus:outline-none" onClick={() => { closeSnackbar(snackbarId) }}>

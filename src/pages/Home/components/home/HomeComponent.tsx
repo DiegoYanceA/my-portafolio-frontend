@@ -1,7 +1,7 @@
 import { HomeProps } from "../../../../props"
 import perfilImg from '../../../../assets/perfil.jpg'
 
-function HomeComponent({ user, trans }: HomeProps) {
+function HomeComponent({ user, trans }: Readonly<HomeProps>) {
     return (
         <div id="home" className="section h-screen-fix lg:h-screen" data-title={trans?.text}>
             <div className="section-scroll w-full h-full font-bold flex justify-center items-center">

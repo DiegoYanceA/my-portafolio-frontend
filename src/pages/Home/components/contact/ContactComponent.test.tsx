@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import ContactComponent from './ContactComponent'
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 
 describe('<ContactComponent />', () => {

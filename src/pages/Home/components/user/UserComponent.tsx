@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { UserProps } from '../props';
+import { UserProps } from '../../../../props';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 
-function UserComponent({ trans }: UserProps) {
+function UserComponent({ trans }: Readonly<UserProps>) {
 
     return (
         <div id="user" className='user section h-screen' data-title={trans?.text}>

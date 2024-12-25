@@ -62,12 +62,12 @@ export type StackTable = Stack & {
 }
 
 export type TranslationLiteral = {
-    home: HomeLiteral,
+    home: Literal,
     user: UserLiteral,
     project: ProjectLiteral,
     skills: SkillLiteral,
     contact: ContactLiteral,
-    footer: FooterLiteral
+    footer: Literal
 }
 
 export type Snackbard = {
@@ -91,12 +91,10 @@ export type SkillTable = Table & {
     nameLabel: string,
     yearsLabel: string
 }
-type Literal = {
+
+export type Literal = {
     text: string,
     description: string
-}
-
-export type HomeLiteral = Literal & {
 }
 
 export type UserLiteral = Literal & {
@@ -125,7 +123,4 @@ export type SkillLiteral = Literal & {
 
 export type ContactLiteral = Literal & {
     snackbard: Snackbard
-}
-
-export type FooterLiteral = Literal & {
 }
