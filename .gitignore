@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+sonar-project.properties
+.scannerwork
+coverage

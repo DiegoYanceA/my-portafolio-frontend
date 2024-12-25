@@ -23,6 +23,7 @@ export type User = {
 }
 
 export type Projects = {
+    id: number,
     title: string,
     technologies: Array<string>,
     live: string,
@@ -35,8 +36,8 @@ export type CardProject = Projects & {
     sectorName: string
 }
 
-export type Sector = {
-    title: string,
+export type Option = {
+    text: string,
     id: number
 }
 
@@ -47,6 +48,7 @@ export type Skill = {
 }
 
 export type Stack = {
+    id: number,
     title: string,
     year: number,
     month: number,
@@ -54,8 +56,9 @@ export type Stack = {
     logo: string
 }
 
-export type SkillStackTable = Stack & {
-    category: string
+export type StackTable = Stack & {
+    category: string,
+    idSkill: number
 }
 
 export type TranslationLiteral = {
@@ -72,16 +75,21 @@ export type Snackbard = {
 }
 
 type Table = {
-    header: Array<string>,
-    rowsPerPage: number | undefined,
+    header: Array<Option>
+    footer: FooterTable
+}
+
+type FooterTable = {
+    noRecords: string,
+    showRows: string
 }
 
 export type SkillTable = Table & {
     experienceLabel: string,
-    experienceOptions: Array<string>,
+    experienceOptions: Array<Option>,
     categoryLabel: string,
     nameLabel: string,
-    yearsLabel: string,
+    yearsLabel: string
 }
 type Literal = {
     text: string,
@@ -97,18 +105,19 @@ export type UserLiteral = Literal & {
 }
 
 export type ProjectLiteral = Literal & {
-    sector: Array<Sector>,
+    sector: Array<Option>,
     openCard: string,
     closeCard: string,
     liveText: string,
     nameLabel: string,
-    sectorLabel: string
+    sectorLabel: string,
+    noRecords: string
 }
 
 export type SkillLiteral = Literal & {
     experience: string,
     proficiency: string,
-    list: Array<Skill> | undefined,
+    categories: Array<Option>,
     table: SkillTable,
     openGraphic: string,
     closeGraphic: string,

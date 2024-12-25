@@ -14,54 +14,123 @@
         "sector": [
             {
                 "id": 0,
-                "title": "Todos"
+                "text": "Todos"
             },
             {
                 "id": 1,
-                "title": "Automóviles"
+                "text": "Automóviles"
             },
             {
                 "id": 2,
-                "title": "Belleza y cuidado personal"
+                "text": "Belleza y cuidado personal"
             },
             {
                 "id": 3,
-                "title": "Educación"
+                "text": "Educación"
             },
             {
                 "id": 4,
-                "title": "Medios de comunicación"
+                "text": "Medios de comunicación"
             },
             {
                 "id": 5,
-                "title": "Servicios Financieros"
+                "text": "Servicios Financieros"
             },
             {
                 "id": 6,
-                "title": "Telecomunicaciones y tecnología"
+                "text": "Telecomunicaciones y tecnología"
             },
             {
                 "id": 7,
-                "title": "Servicios Profesionales"
+                "text": "Servicios Profesionales"
             }
         ],
         "openCard": "Mostrar más",
         "closeCard": "Mostrar menos",
         "liveText": "En vivo",
         "nameLabel": "Tecnología",
-        "sectorLabel": "Rubro"
+        "sectorLabel": "Rubro",
+        "noRecords": "No hay proyectos que coincidan con tu búsqueda"
     },
     "skills": {
         "text": "Habilidades",
         "experience": "Comparativa de años de experiencia por",
         "proficiency": "Comparativa de años de competencias en formación por",
+        "categories": [
+            {
+                "id": 0,
+                "text": "Todos"
+            },
+            {
+                "id": 1,
+                "text": "Lenguaje de Programación"
+            },
+            {
+                "id": 2,
+                "text": "Frontend"
+            },
+            {
+                "id": 3,
+                "text": "Backend"
+            },
+            {
+                "id": 4,
+                "text": "Base de datos"
+            },
+            {
+                "id": 5,
+                "text": "Videojuegos"
+            },
+            {
+                "id": 6,
+                "text": "Otros"
+            }
+        ],
         "table":{
-            "header":["Logo", "Tecnología", "Categoría", "Años de experiencia", "Experiencia laboral"],
+            "header":[
+                {
+                    "id": 0,
+                    "text": "Logo"
+                },
+                {
+                    "id": 1,
+                    "text": "Tecnología"
+                },
+                {
+                    "id": 2,
+                    "text": "Categoría"
+                },
+                {
+                    "id": 3,
+                    "text": "Años de experiencia"
+                },
+                {
+                    "id": 4,
+                    "text": "Experiencia laboral"
+                }
+            ],
             "experienceLabel": "Experiencia Laboral",
-            "experienceOptions": ["Todos", "Con experiencia", "Sin experiencia"],
+            "experienceOptions": [
+                {
+                    "id": 0,
+                    "text": "Todos"
+                },
+                {
+                    "id": 1,
+                    "text": "Con experiencia"
+                },
+                {
+                    "id": 2,
+                    "text": "Sin experiencia"
+                }
+            ],
             "categoryLabel": "Categoría",
             "nameLabel": "Tecnología",
-            "yearsLabel": "Años"
+            "yearsLabel": "Años",
+            "footer": {
+                "noRecords": "No hay resultados",
+                "showRows": "Mostrando {start} a {end} de {total}"
+            }
         },
         "openGraphic": "Mostrar gráficos",
         "closeGraphic": "Ocultar gráficos"

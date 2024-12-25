@@ -14,72 +14,123 @@
         "sector": [
             {
                 "id": 0,
-                "title": "All"
+                "text": "All"
             },
             {
                 "id": 1,
-                "title": "Automobiles"
+                "text": "Automobiles"
             },
             {
                 "id": 2,
-                "title": "Beauty and Personal Care"
+                "text": "Beauty and Personal Care"
             },
             {
                 "id": 3,
-                "title": "Education"
+                "text": "Education"
             },
             {
                 "id": 4,
-                "title": "Media and Communication"
+                "text": "Media and Communication"
             },
             {
                 "id": 5,
-                "title": "Financial Services"
+                "text": "Financial Services"
             },
             {
                 "id": 6,
-                "title": "Telecommunications and Technology"
+                "text": "Telecommunications and Technology"
             },
             {
                 "id": 7,
-                "title": "Professional Services"
+                "text": "Professional Services"
             }
         ],
         "openCard": "Show more",
         "closeCard": "Show less",
         "liveText": "Live",
         "nameLabel": "Technology",
-        "sectorLabel": "Sector"
+        "sectorLabel": "Sector",
+        "noRecords": "There are no projects that match your search"
     },
     "skills": {
         "text": "Skills",
         "experience": "Comparison of years of experience by",
         "proficiency": "Comparison of years of proficiency in training by",
-        "list": [
+        "categories": [
+            {
+                "id": 0,
+                "text": "All"
+            },
             {
                 "id": 1,
-                "title": "Programming language"
+                "text": "Programming language"
+            },
+            {
+                "id": 2,
+                "text": "Frontend"
+            },
+            {
+                "id": 3,
+                "text": "Backend"
             },
             {
                 "id": 4,
-                "title": "Database"
+                "text": "Database"
             },
             {
                 "id": 5,
-                "title": "Videogames"
+                "text": "Videogames"
             },
             {
                 "id": 6,
-                "title": "Others"
+                "text": "Others"
             }
         ],
         "table":{
-            "header":["Logo", "Technology",  "Category", "Years of experience", "Work Experience"],
+            "header": [
+                {
+                    "id": 0,
+                    "text": "Logo"
+                },
+                {
+                    "id": 1,
+                    "text": "Technology"
+                },
+                {
+                    "id": 2,
+                    "text": "Category"
+                },
+                {
+                    "id": 3,
+                    "text": "Years of experience"
+                },
+                {
+                    "id": 4,
+                    "text": "Work Experience"
+                }
+            ],
             "experienceLabel": "Job Experience",
-            "experienceOptions": ["All", "With experience", "Without experience"],
+            "experienceOptions": [
+                {
+                    "id": 0,
+                    "text": "All"
+                },
+                {
+                    "id": 1,
+                    "text": "With experience"
+                },
+                {
+                    "id": 2,
+                    "text": "Without experience"
+                }
+            ],
             "categoryLabel": "Category",
             "nameLabel": "Technology",
-            "yearsLabel": "Years"
+            "yearsLabel": "Years",
+            "footer": {
+                "noRecords": "No results found",
+                "showRows": "Showing {start} to {end} of {total}"
+            }
         },
         "openGraphic": "Show graphics",
         "closeGraphic": "Hide graphics"

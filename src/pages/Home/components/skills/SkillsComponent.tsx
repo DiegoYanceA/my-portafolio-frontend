@@ -1,8 +1,8 @@
 import { Chart } from "react-google-charts";
 
-import { Skill, Stack } from '../types';
-import { SkillsProps } from '../props';
-import TableComponent from "./TableComponent";
+import { Skill, Stack } from '../../../../types';
+import { SkillsProps } from '../../../../props';
+import TableComponent from "../table/TableComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartPie } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
@@ -86,11 +86,11 @@ function SkillsComponent({ skills, trans, isDark }: SkillsProps) {
         const addClass = double ? "lg:col-span-2" : "";
 
         let title = item.title;
-        if (trans?.list != null) {
-            const skillsTrans = trans.list;
+        if (trans?.categories != null) {
+            const skillsTrans = trans.categories;
             const itemTrans = skillsTrans.find(x => x.id == item.id);
             if (itemTrans != null) {
-                title = itemTrans.title;
+                title = itemTrans.text;
             }
         }
 
@@ -121,6 +121,7 @@ function SkillsComponent({ skills, trans, isDark }: SkillsProps) {
                     <div>
                         <TableComponent
                             skills={skills}
+                            categories={trans.categories}
                             trans={trans.table}
                         />
                     </div>

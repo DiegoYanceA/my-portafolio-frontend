@@ -1,12 +1,12 @@
 import { useEffect } from "react";
-import { WrapperProps } from "../props"
-import ContactComponent from "./ContactComponent";
-import HomeComponent from "./HomeComponent";
-import SkillsComponent from "./SkillsComponent";
-import UserComponent from "./UserComponent";
-import ProjectsComponent from "./ProjectsComponent";
+import { WrapperProps } from "../../props"
+import ContactComponent from "./components/contact/ContactComponent";
+import HomeComponent from "./components/home/HomeComponent";
+import SkillsComponent from "./components/skills/SkillsComponent";
+import UserComponent from "./components/user/UserComponent";
+import ProjectsComponent from "./components/projects/ProjectsComponent";
 
-function WrapperComponent({ information, translationLiteral, preference }: WrapperProps) {
+function HomePage({ information, translationLiteral, preference }: WrapperProps) {
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
@@ -69,4 +69,4 @@ function WrapperComponent({ information, translationLiteral, preference }: Wrapp
   )
 }
 
-export default WrapperComponent
+export default HomePage

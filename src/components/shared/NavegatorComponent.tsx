@@ -10,13 +10,15 @@ import {
     faBars,
     faUserNinja
 } from '@fortawesome/free-solid-svg-icons'
-import { NavegatorProps } from '../props';
+import { NavegatorProps } from '../../props';
 import { useEffect, useRef, useState } from 'react';
 
 function NavegatorComponent({ preference, translationLiteral, changeLang, changeThemeMode }: NavegatorProps) {
     let isDark = preference?.dark;
     let lang = preference?.lang;
     let trans = translationLiteral;
+
+    const winHeight = window.innerHeight;
 
     //State
     const [openLang, setOpenLang] = useState(false)
@@ -28,31 +30,30 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
     const itemLangRef = useRef<HTMLLIElement  | null>(null);
     const menuFloatRef = useRef<HTMLDivElement  | null>(null);
 
-    const toggleLang = () => {
+    function toggleLang() {
         setOpenLang(open => {
             if(!open) {
                 if(itemLangRef.current != null && menuFloatRef.current != null){
                     const rect = itemLangRef.current.getBoundingClientRect()
                     const menu = menuFloatRef.current;
                     menu.style.top = rect.y + "px"
-                }
-                
+                }   
             }
             return !open;
         });
     }
 
-    const selectLang = (lang: string) => {
+    function selectLang (lang: string) {
         setOpenLang(false);
         changeLang(lang)
     }
 
-    const toggleMenu = () => {
+    function toggleMenu() {
         setOpenLang(false);
         setOpenMenu(open => !open);
     }
 
-    const showMenuDesktop = () => {
+    function showMenuDesktop() {
         document.body.classList.remove("no-scroll");
         if(window.innerWidth < 768){
             if(openMenu) {
@@ -65,7 +66,15 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
         return "";
     }
 
-    
+    function showSection(item: HTMLElement, winHeight:number) {
+        const rect = item.getBoundingClientRect();
+        if(!item.classList.contains("visible")){
+            
+            if(rect.top <= winHeight){
+                item.classList.add("visible")
+            }
+        }
+    }
 
     useEffect(() => {
         // Crear un observer para las secciones
@@ -82,7 +91,7 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
 
                         const item = entry.target as HTMLElement;
                         const find = item.firstChild as HTMLElement
-                        showText(find, winHeight)
+                        showSection(find, winHeight)
                     }
                 });
             },
@@ -95,20 +104,14 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
         const sections = document.querySelectorAll('.section');
         sections.forEach(section => observer.observe(section));
 
-        const docHeight = document.documentElement.scrollHeight;
-        const winHeight = window.innerHeight;
-        
-
-        const showText = (item: HTMLElement, winHeight:number) => {
-            const rect = item.getBoundingClientRect();
-            if(!item.classList.contains("visible")){
-                
-                if(rect.top <= winHeight){
-                    item.classList.add("visible")
-                }
-            }
+        return () => {
+            observer.disconnect();
         }
+    }, [translationLiteral])
+    
 
+    useEffect(() => {
+        const docHeight = document.documentElement.scrollHeight;
         const handleScroll = () => {
             const scrollTop = window.scrollY; 
             
@@ -124,7 +127,6 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
         window.addEventListener('scroll', handleScroll);
 
         return () => {
-            observer.disconnect();
             window.removeEventListener('scroll', handleScroll);
         }
     }, []);
@@ -206,7 +208,7 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                         <ul className="px-1 md:mt-0 md:px-3 grid">
                             <li ref={itemLangRef}>
                                 <a className={openLang ? '--active' : ''} onClick={toggleLang}>
-                                    <div className='title-lang'>
+                                    <div className='title--lang'>
                                         {lang?.toUpperCase() || "N/A"}
                                     </div>
                                 </a>
@@ -215,13 +217,13 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                             <li>
                                 {
                                     isDark ?
-                                        <a onClick={() => changeThemeMode(false)}>
+                                        <a id="changeMode" onClick={() => changeThemeMode(false)}>
                                             <div className='icon'>
                                                 <FontAwesomeIcon icon={faSun} />
                                             </div>
                                         </a>
                                         :
-                                        <a onClick={() => changeThemeMode(true)}>
+                                        <a id="changeMode" onClick={() => changeThemeMode(true)}>
                                             <div className='icon'>
                                                 <FontAwesomeIcon icon={faMoon} />
                                             </div>

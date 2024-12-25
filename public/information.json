@@ -7,6 +7,7 @@
     },
     "projects": [
         {
+            "id": 1,
             "title": "Inteligo SAB",
             "technologies": ["Html5", "CSS", "Javascript", "Java", "C#", "React.js", "Liferay 7.4",  "Azure Cloud", "SQL Server", "CosmoDB", "Bitbucket", "Jira", "Git", "Dapper"],
             "live": "https://login.inteligosab.com/home",
@@ -15,6 +16,7 @@
             "sector": 5
         },
         {
+            "id": 2,
             "title": "Belcorp",
             "technologies": ["Html5", "CSS", "Javascript", "C#", "React.js", ".NET Framework 4.8", "Dotnet 8", "SQL Server", "Git"],
             "live": "https://www.somosbelcorp.com/",
@@ -23,6 +25,7 @@
             "sector": 2
         },
         {
+            "id": 3,
             "title": "DIVEMOTOR Colombia",
             "technologies": ["Html5", "CSS", "Javascript", "JQuery", "Liferay 7.4", "Azure Devops", "Git"],
             "live": "https://divemotor.com.co/",
@@ -31,6 +34,7 @@
             "sector": 1
         },
         {
+            "id": 4,
             "title": "Fuso Chile",
             "technologies": ["Html5", "CSS", "Javascript", "JQuery", "Liferay 7.4", "Azure Devops", "Git"],
             "live": "https://www.fuso.cl/",
@@ -39,6 +43,7 @@
             "sector": 1
         },
         {
+            "id": 5,
             "title": "Maxus Chile",
             "technologies": ["Html5", "CSS", "Html5", "CSS", "Javascript", "JQuery", "Liferay 7.4", "Azure Devops", "Git"],
             "live": "https://www.maxus.cl/",
@@ -47,6 +52,7 @@
             "sector": 1
         },
         {
+            "id": 6,
             "title": "Andesmotor Chile",
             "technologies": ["Html5", "CSS", "Javascript", "JQuery", "Liferay 7.4", "Azure Devops", "Git"],
             "live": "https://www.andesmotor.cl/",
@@ -55,6 +61,7 @@
             "sector": 1
         },
         {
+            "id": 7,
             "title": "NETA Colombia",
             "technologies": ["Html5", "CSS", "Javascript", "JQuery", "Liferay 7.4", "Git"],
             "live": "https://www.netaauto.co.cr/",
@@ -63,6 +70,7 @@
             "sector": 1
         },
         {
+            "id": 8,
             "title": "Sany Chile",
             "technologies": ["Html5", "CSS", "Javascript", "Angular.js", "Liferay 7.4", "Git"],
             "live": "https://sany.cl/",
@@ -71,6 +79,7 @@
             "sector": 1
         },
         {
+            "id": 9,
             "title": "Jetour Chile",
             "technologies": ["Html5", "CSS", "Javascript", "JQuery", "Liferay 7.4", "Git"],
             "live": "https://jetourchile.cl/",
@@ -79,6 +88,7 @@
             "sector": 1
         },
         {
+            "id": 10,
             "title": "Kaufmann Chile",
             "technologies": ["Html5", "CSS", "Javascript", "JQuery", "Liferay 7.4", "Azure Devops", "Git"],
             "live": "https://www.kaufmann.cl/",
@@ -87,6 +97,7 @@
             "sector": 1
         },
         {
+            "id": 11,
             "title": "GTD Company",
             "technologies": ["Html5", "CSS", "Javascript", "Liferay 7.4"],
             "live": "https://www.gtdcompany.com/",
@@ -95,6 +106,7 @@
             "sector": 6
         },
         {
+            "id": 12,
             "title": "Rotafono - CMS Rotafono",
             "technologies": ["Html5", "CSS", "Javascript", "Sass", "Typescript", "JQuery", "Angular.js", "PHP", "Phalcon", "MongoDB", "Git"],
             "live": "https://rotafono.pe/",
@@ -103,6 +115,7 @@
             "sector": 4
         },
         {
+            "id": 13,
             "title": "Smartsys",
             "technologies": ["Html5", "CSS", "Sass", "Typescript" , "Javascript", "JQuery", "C#", "Dotnet 8", ".NET Framework 4.8", "Angular.js", "PostgreSQL", "Git", "Bitbucket", "Node.js"],
             "live": "https://www.smartsys.com.pe/",
@@ -111,6 +124,7 @@
             "sector": 7
         },
         {
+            "id": 14,
             "title": "Bdo Apps",
             "technologies": ["Html5", "CSS", "Javascript", "JQuery", "PHP", "Laravel", "PostgreSQL", "Git", "Dapper"],
             "live": "https://ti.bdooutsourcing.com.pe/BDOapps",
@@ -119,6 +133,7 @@
             "sector": 7
         },
         {
+            "id": 15,
             "title": "MyOn",
             "technologies": ["Html5", "CSS", "Javascript", "JQuery", "C#", ".NET Framework 4.8", "Git"],
             "live": "https://digital.santillana.com.pe/registromyon",
@@ -127,6 +142,7 @@
             "sector": 3
         },
         {
+            "id": 16,
             "title": "Santillana Proyectos",
             "technologies": ["Html5", "CSS", "Javascript", "JQuery","C#", ".NET Framework 4.8", "SQL server", "Entity Framework"],
             "live": "https://digital.santillana.com.pe/quedateencasa",
@@ -135,6 +151,7 @@
             "sector": 3
         },
         {
+            "id": 17,
             "title": "Santillana #QuédateEnCasa",
             "technologies": ["Html5", "CSS", "Javascript", "Unity", "Phaser.js"],
             "live": "https://digital.santillana.com.pe/quedateencasa",
@@ -143,6 +160,7 @@
             "sector": 3
         },
         {
+            "id": 18,
             "title": "Santillana Digital",
             "technologies": ["Html5", "CSS", "Javascript", "C#", "JQuery", "Vue.js", ".NET Framework 4.8", "Phaser.js", "Express.js", "Node.js", "Bitbucket", "Git", "SQL server", "MySQL", "Entity Framework", "CodeIgniter"],
             "live": "https://digital.santillana.com.pe",
@@ -158,6 +176,7 @@
             "title": "Lenguaje de Programación",
             "stacks": [
                 {
+                    "id": 0,
                     "title": "Javascript",
                     "year": 4,
                     "month": 0,
@@ -165,6 +184,7 @@
                     "logo": "./technology/javascript.png"
                 },
                 {
+                    "id": 1,
                     "title": "Typescript",
                     "year": 2,
                     "month": 0,
@@ -172,6 +192,7 @@
                     "logo": "./technology/ts.png"
                 },
                 {
+                    "id": 3,
                     "title": "PHP",
                     "year": 2,
                     "month": 0,
@@ -179,6 +200,7 @@
                     "logo": "./technology/php.png"
                 },
                 {
+                    "id": 4,
                     "title": "C#",
                     "year": 4,
                     "month": 0,
@@ -186,6 +208,7 @@
                     "logo": "./technology/csharp.png"
                 },
                 {
+                    "id": 5,
                     "title": "Go",
                     "year": 1,
                     "month": 0,
@@ -193,6 +216,7 @@
                     "logo": "./technology/go.png"
                 },
                 {
+                    "id": 6,
                     "title": "C++",
                     "year": 1,
                     "month": 0,
@@ -200,6 +224,7 @@
                     "logo": "./technology/c++.png"
                 },
                 {
+                    "id": 7,
                     "title": "Java",
                     "year": 1,
                     "month": 0,
@@ -207,6 +232,7 @@
                     "logo": "./technology/java.png"
                 },
                 {
+                    "id": 8,
                     "title": "Python",
                     "year": 1,
                     "month": 0,
@@ -220,6 +246,7 @@
             "title": "Frontend",
             "stacks": [
                 {
+                    "id": 9,
                     "title": "Html5",
                     "year": 4,
                     "month": 0,
@@ -227,6 +254,7 @@
                     "logo": "./technology/html.webp"
                 },
                 {
+                    "id": 10,
                     "title": "CSS",
                     "year": 4,
                     "month": 0,
@@ -234,6 +262,7 @@
                     "logo": "./technology/css.svg"
                 },
                 {
+                    "id": 11,
                     "title": "Sass",
                     "year": 4,
                     "month": 0,
@@ -241,6 +270,7 @@
                     "logo": "./technology/sass.png"
                 },
                 {
+                    "id": 12,
                     "title": "Angular",
                     "year": 3,
                     "month": 0,
@@ -248,6 +278,7 @@
                     "logo": "./technology/angular.png"
                 },
                 {
+                    "id": 13,
                     "title": "React.js",
                     "year": 1,
                     "month": 0,
@@ -255,6 +286,7 @@
                     "logo": "./technology/react.png"
                 },
                 {
+                    "id": 14,
                     "title": "Vue.js",
                     "year": 1,
                     "month": 0,
@@ -262,6 +294,7 @@
                     "logo": "./technology/vuejs.png"
                 },
                 {
+                    "id": 15,
                     "title": "Tailwind",
                     "year": 1,
                     "month": 0,
@@ -269,6 +302,7 @@
                     "logo": "./technology/tailwind.png"
                 },
                 {
+                    "id": 16,
                     "title": "Bootstrap 3 y 4",
                     "year": 4,
                     "month": 0,
@@ -276,6 +310,7 @@
                     "logo": "./technology/bootstrap.png"
                 },
                 {
+                    "id": 17,
                     "title": "JQuery",
                     "year": 3,
                     "month": 0,
@@ -289,6 +324,7 @@
             "title": "Backend",
             "stacks": [
                 {
+                    "id": 18,
                     "title": "Express.js",
                     "year": 1,
                     "month": 0,
@@ -296,6 +332,7 @@
                     "logo": "./technology/express.png"
                 },
                 {
+                    "id": 19,
                     "title": "ASP.NET",
                     "year": 3,
                     "month": 0,
@@ -303,6 +340,7 @@
                     "logo": "./technology/aspnet.png"
                 },
                 {
+                    "id": 20,
                     "title": ".Net Core 8",
                     "year": 3,
                     "month": 0,
@@ -310,6 +348,7 @@
                     "logo": "./technology/netcore.png"
                 },
                 {
+                    "id": 21,
                     "title": "Laravel",
                     "year": 1,
                     "month": 0,
@@ -317,6 +356,7 @@
                     "logo": "./technology/laravel.png"
                 },
                 {
+                    "id": 22,
                     "title": "CodeIgniter",
                     "year": 1,
                     "month": 0,
@@ -324,6 +364,7 @@
                     "logo": "./technology/codeigniter.svg"
                 },
                 {
+                    "id": 23,
                     "title": "Phalcon",
                     "year": 1,
                     "month": 0,
@@ -337,6 +378,7 @@
             "title": "Base de datos",
             "stacks": [
                 {
+                    "id": 24,
                     "title": "MySQL",
                     "year": 2,
                     "month": 0,
@@ -344,6 +386,7 @@
                     "logo": "./technology/mysql.png"
                 },
                 {
+                    "id": 25,
                     "title": "PostgreSQL",
                     "year": 1,
                     "month": 0,
@@ -351,6 +394,7 @@
                     "logo": "./technology/postgres.png"
                 },
                 {
+                    "id": 26,
                     "title": "MongoDB",
                     "year": 1,
                     "month": 0,
@@ -358,6 +402,7 @@
                     "logo": "./technology/mongo.png"
                 },
                 {
+                    "id": 27,
                     "title": "SQL Server",
                     "year": 3,
                     "month": 0,
@@ -365,6 +410,7 @@
                     "logo": "./technology/sqlserver.png"
                 },
                 {
+                    "id": 28,
                     "title": "CosmoDB",
                     "year": 1,
                     "month": 0,
@@ -378,6 +424,7 @@
             "title": "Videojuegos",
             "stacks": [
                 {
+                    "id": 29,
                     "title": "Unity",
                     "year": 1,
                     "month": 0,
@@ -385,6 +432,7 @@
                     "logo": "./technology/unity.png"
                 },
                 {
+                    "id": 30,
                     "title": "Phaser.js",
                     "year": 1,
                     "month": 0,
@@ -392,6 +440,7 @@
                     "logo": "./technology/phaser.png"
                 },
                 {
+                    "id": 31,
                     "title": "Unreal Engine 4",
                     "year": 1,
                     "month": 0,
@@ -405,6 +454,7 @@
             "title": "Otros",
             "stacks": [
                 {
+                    "id": 32,
                     "title": "Vuforia",
                     "year": 1,
                     "month": 0,
@@ -412,6 +462,7 @@
                     "logo": "./technology/vuforia.png"
                 },
                 {
+                    "id": 33,
                     "title": "GraphQL",
                     "year": 1,
                     "month": 0,
@@ -419,6 +470,7 @@
                     "logo": "./technology/graphql.png"
                 },
                 {
+                    "id": 34,
                     "title": "Node.js",
                     "year": 2,
                     "month": 0,
@@ -426,6 +478,7 @@
                     "logo": "./technology/nodejs.svg"
                 },
                 {
+                    "id": 35,
                     "title": "Dapper",
                     "year": 2,
                     "month": 0,
@@ -433,6 +486,7 @@
                     "logo": "./technology/dapper.png"
                 },
                 {
+                    "id": 36,
                     "title": "Entity Framework",
                     "year": 2,
                     "month": 0,
@@ -440,6 +494,7 @@
                     "logo": "./technology/ef.png"
                 },
                 {
+                    "id": 37,
                     "title": "Figma",
                     "year": 3,
                     "month": 0,
@@ -447,6 +502,7 @@
                     "logo": "./technology/figma.svg"
                 },
                 {
+                    "id": 38,
                     "title": "Git",
                     "year": 4,
                     "month": 0,
@@ -454,6 +510,7 @@
                     "logo": "./technology/git.png"
                 },
                 {
+                    "id": 39,
                     "title": "Jira",
                     "year": 3,
                     "month": 0,
@@ -461,6 +518,7 @@
                     "logo": "./technology/jira.png"
                 },
                 {
+                    "id": 40,
                     "title": "Postman",
                     "year": 3,
                     "month": 0,
@@ -468,6 +526,7 @@
                     "logo": "./technology/postman.webp"
                 },
                 {
+                    "id": 41,
                     "title": "Azure Cloud",
                     "year": 2,
                     "month": 0,
@@ -475,6 +534,7 @@
                     "logo": "./technology/azure.webp"
                 },
                 {
+                    "id": 42,
                     "title": "SCRUM",
                     "year": 4,
                     "month": 0,
