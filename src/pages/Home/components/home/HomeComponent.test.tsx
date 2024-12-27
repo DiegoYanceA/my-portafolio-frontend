@@ -1,16 +1,16 @@
 import { describe, expect, it } from 'vitest'
-import ContactComponent from './ContactComponent'
+import HomeComponent from './HomeComponent'
 import { render } from '@testing-library/react';
 
 
-describe('<ContactComponent />', () => {
+describe('<HomeComponent />', () => {
     
-    it('Get email', () => {
+    it('Go to Linkedin', () => {
         const user = {
             title: "-",
-            linkedin: "linkedin",
+            linkedin: "https://www.linkedin.com/in/diegoyance",
             github: "-",
-            email: "diego.yance.arqque@gmail.com"
+            email: "-"
         };
 
         const trans = {
@@ -21,12 +21,12 @@ describe('<ContactComponent />', () => {
             }
         }
 
-        render(<ContactComponent
+        render(<HomeComponent
                 user={user}
                 trans={trans}
             />);
         
-        const link1 = document.querySelector('a[href="mailto:diego.yance.arqque@gmail.com"]');
+        const link1 = document.querySelector('a[href="https://www.linkedin.com/in/diegoyance"]');
         const validate = link1 != null;
         expect(validate).toBe(true);
     })

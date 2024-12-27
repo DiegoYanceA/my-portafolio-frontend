@@ -310,7 +310,7 @@ $themes: (
     width: ct.$nav-mobile-width;
     ul {
       li {
-        a {
+        a,button {
           padding: 0.65rem 0px;
           .icon {
             font-size: 2rem;
@@ -422,7 +422,7 @@ $themes: (
     width: ct.$nav-desktop-width;
     ul {
       li {
-        a {
+        a, button {
           padding: 0.5rem 0;
           .icon {
             font-size: 2rem;

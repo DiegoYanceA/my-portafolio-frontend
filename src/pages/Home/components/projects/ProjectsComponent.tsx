@@ -9,7 +9,7 @@ import { escapeRegExp } from "../../../../utils/RegexUtil";
 function ProjectsComponent({ trans, projects }: Readonly<ProjectProps>) {
     const [showMoreData, setShowMoreData] = useState(false)
     const data = useMemo<Array<CardProject>>(initData, [trans]);
-    const [showDate, setShowData] = useState<Array<CardProject>>(initShowDate)
+    const [showData, setShowData] = useState<Array<CardProject>>(initShowData)
 
     function initData(): Array<CardProject> {
         const newData: Array<CardProject> = [];
@@ -23,7 +23,7 @@ function ProjectsComponent({ trans, projects }: Readonly<ProjectProps>) {
         return newData;
     }
 
-    function initShowDate(): Array<CardProject> {
+    function initShowData(): Array<CardProject> {
         return data.slice(0, 6);
     }
 
@@ -63,7 +63,7 @@ function ProjectsComponent({ trans, projects }: Readonly<ProjectProps>) {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-x-5 lg:mb-5 mb-10 gap-y-5 lg:gap-y-0 lg:px-0">
                     <div className="md:col-span-5 lg:col-span-4">
                         <label htmlFor="nameProjectFilter">{trans.nameLabel}</label>
-                        <input id="nameProjectFilter" className="w-full" onChange={handleTextFilterChange} type="text" />
+                        <input data-testid="nameProjectFilter" id="nameProjectFilter" className="w-full" onChange={handleTextFilterChange} type="text" />
                     </div>
 
                     <div className="md:col-span-5 lg:col-span-3">
@@ -81,15 +81,15 @@ function ProjectsComponent({ trans, projects }: Readonly<ProjectProps>) {
                 </div>
 
                 {
-                    showDate.length === 0 &&
+                    showData.length === 0 &&
                     <div className="text-center">
                         {trans.noRecords}
                     </div>
                 }
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
+                <div data-testid="projects" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
                     {
-                        showDate.map((item) => (
+                        showData.map((item) => (
                             <div className="card" key={`card-project-${item.id}`}>
                                 <div className="card__image">
                                     <a href={item.live} target='_blank' className="relative">
@@ -130,9 +130,9 @@ function ProjectsComponent({ trans, projects }: Readonly<ProjectProps>) {
 
                 </div>
                 {
-                    5 < showDate.length &&
+                    5 < showData.length &&
                     <div className="w-100 flex justify-center pt-10">
-                        <button className="btn gap-x-2 growShrink" onClick={() => setShowMoreData(!showMoreData)}>
+                        <button data-testid="open-all" className="btn gap-x-2 growShrink" onClick={() => setShowMoreData(!showMoreData)}>
                             <span className="text-base">
                                 {showMoreData ? trans.closeCard : trans.openCard}
                             </span>

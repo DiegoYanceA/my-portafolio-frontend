@@ -11,125 +11,27 @@ import {
     faUserNinja
 } from '@fortawesome/free-solid-svg-icons'
 import { NavegatorProps } from '../../props';
-import { useEffect, useRef, useState } from 'react';
+import { useNavegator } from '../../hooks/useNavegator';
 
 function NavegatorComponent({ preference, translationLiteral, changeLang, changeThemeMode }: Readonly<NavegatorProps>) {
     let isDark = preference?.dark;
     let lang = preference?.lang;
     let trans = translationLiteral;
 
-    const winHeight = window.innerHeight;
+    const {
+        openLang,
+        openMenu,
+        activeSection,
+        title,
+        progress,
+        itemLangRef,
+        menuFloatRef,
+        toggleLang,
+        showMenuDesktop,
+        selectLang,
+        toggleMenu
+    } = useNavegator(changeLang, translationLiteral)
 
-    //State
-    const [openLang, setOpenLang] = useState(false)
-    const [openMenu, setOpenMenu] = useState(false)
-    const [activeSection, setActiveSection] = useState<string  | null>(null);
-    const [title, setTitle] = useState<string  | null>(null);
-    const [progress, setProgress] = useState(0);
-
-    const itemLangRef = useRef<HTMLLIElement  | null>(null);
-    const menuFloatRef = useRef<HTMLDivElement  | null>(null);
-
-    function toggleLang() {
-        setOpenLang(open => {
-            if(!open) {
-                if(itemLangRef.current != null && menuFloatRef.current != null){
-                    const rect = itemLangRef.current.getBoundingClientRect()
-                    const menu = menuFloatRef.current;
-                    menu.style.top = rect.y + "px"
-                }   
-            }
-            return !open;
-        });
-    }
-
-    function selectLang (lang: string) {
-        setOpenLang(false);
-        changeLang(lang)
-    }
-
-    function toggleMenu() {
-        setOpenLang(false);
-        setOpenMenu(open => !open);
-    }
-
-    function showMenuDesktop() {
-        document.body.classList.remove("no-scroll");
-        if(window.innerWidth < 768){
-            if(openMenu) {
-                document.body.classList.add("no-scroll");
-                return "move-right";
-            }
-
-            return "move-left";
-        }
-        return "";
-    }
-
-    function showSection(item: HTMLElement, winHeight:number) {
-        const rect = item.getBoundingClientRect();
-        if(!item.classList.contains("visible")){
-            
-            if(rect.top <= winHeight){
-                item.classList.add("visible")
-            }
-        }
-    }
-
-    useEffect(() => {
-        // Crear un observer para las secciones
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const target = entry.target as HTMLElement;
-                        if(target.dataset.title != null){
-                            setTitle(target.dataset.title);
-                        }
-                        
-                        setActiveSection(target.id);
-
-                        const item = entry.target as HTMLElement;
-                        const find = item.firstChild as HTMLElement
-                        showSection(find, winHeight)
-                    }
-                });
-            },
-            {
-                threshold: 0.2,
-            }
-        );
-
-        // Seleccionar todas las secciones para observar
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(section => observer.observe(section));
-
-        return () => {
-            observer.disconnect();
-        }
-    }, [translationLiteral])
-    
-
-    useEffect(() => {
-        const docHeight = document.documentElement.scrollHeight;
-        const handleScroll = () => {
-            const scrollTop = window.scrollY; 
-            
-            if (docHeight <= winHeight) {
-                setProgress(100);
-                return;
-            }
-
-            const scrollProgress = (scrollTop / (docHeight - winHeight)) * 100;
-            setProgress(scrollProgress); 
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        }
-    }, []);
 
     return (
         <>
@@ -139,9 +41,9 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
             
             <nav className={`z-30 menu fixed py-2 w-screen md:hidden ${openMenu?"move-up":"move-down"}`}>
                 <div className='px-5'>
-                    <a className={"truncate block max-w-full" } onClick={toggleMenu}>
-                        <FontAwesomeIcon icon={faBars} /> {title}
-                    </a>
+                    <button className={"truncate block max-w-full" } onClick={toggleMenu}>
+                        <FontAwesomeIcon icon={faBars} /> <span data-testid="title" className='ml-2'>{title}</span>
+                    </button>
                 </div>
             </nav>
             <nav className={`z-20 navegator fixed h-dvh max-h-vh md:h-dvh ${showMenuDesktop()}`}>
@@ -149,9 +51,9 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                     <div className='h-full grid grids-cols-1 content-between '>
                         <ul className="px-1 md:px-3 grid">
                             <li className='text-center text-2xl md:hidden'>
-                                <a onClick={toggleMenu}>
+                                <button onClick={toggleMenu}>
                                     <FontAwesomeIcon icon={faTimes} />
-                                </a>
+                                </button>
                             </li>
                             <li>
                                 <a href="#home" className={activeSection === 'home' ? '--active' : ''}>
@@ -159,7 +61,7 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                                         <FontAwesomeIcon icon={faHome} />
                                     </div>
                                     <div className='title'>
-                                        {trans?.home.text || <div className="animate-pulse h-3 bg-slate-700 rounded mx-5 mt-2"></div>}
+                                        {trans?.home.text??<div className="animate-pulse h-3 bg-slate-700 rounded mx-5 mt-2"></div>}
                                     </div>
                                 </a>
                             </li>
@@ -169,7 +71,7 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                                         <FontAwesomeIcon icon={faUserNinja} />
                                     </div>
                                     <div className='title'>
-                                        {trans?.user.text || <div className="animate-pulse h-3 bg-slate-700 rounded mx-5 mt-2"></div>}
+                                        {trans?.user.text??<div className="animate-pulse h-3 bg-slate-700 rounded mx-5 mt-2"></div>}
                                     </div>
                                 </a>
                             </li>
@@ -179,17 +81,17 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                                         <FontAwesomeIcon icon={faGear} />
                                     </div>
                                     <div className='title'>
-                                        {trans?.project.text || <div className="animate-pulse h-3 bg-slate-700 rounded mx-5 mt-2"></div>}
+                                        {trans?.project.text??<div className="animate-pulse h-3 bg-slate-700 rounded mx-5 mt-2"></div>}
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#skills" className={activeSection === 'skills' ? '--active' : ''}>
+                                <a data-testid="skills" href="#skills" className={activeSection === 'skills' ? '--active' : ''}>
                                     <div className='icon'>
                                         <FontAwesomeIcon icon={faLightbulb} />
                                     </div>
                                     <div className='title'>
-                                        {trans?.skills.text || <div className="animate-pulse h-3 bg-slate-700 rounded mx-5 mt-2"></div>}
+                                        {trans?.skills.text??<div className="animate-pulse h-3 bg-slate-700 rounded mx-5 mt-2"></div>}
                                     </div>
                                 </a>
                             </li>
@@ -199,7 +101,7 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                                         <FontAwesomeIcon icon={faPhone} />
                                     </div>
                                     <div className='title'>
-                                        {trans?.contact.text || <div className="animate-pulse h-3 bg-slate-700 rounded mx-5 mt-2"></div>}
+                                        {trans?.contact.text??<div className="animate-pulse h-3 bg-slate-700 rounded mx-5 mt-2"></div>}
                                     </div>
                                 </a>
                             </li>
@@ -207,27 +109,27 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
 
                         <ul className="px-1 md:mt-0 md:px-3 grid">
                             <li ref={itemLangRef}>
-                                <a className={openLang ? '--active' : ''} onClick={toggleLang}>
+                                <button className={openLang ? '--active' : ''} onClick={toggleLang}>
                                     <div className='title--lang'>
-                                        {lang?.toUpperCase() || "N/A"}
+                                        {lang?.toUpperCase() ??"N/A"}
                                     </div>
-                                </a>
+                                </button>
 
                             </li>
                             <li>
                                 {
                                     isDark ?
-                                        <a id="changeMode" onClick={() => changeThemeMode(false)}>
+                                        <button data-testid="changeMode" onClick={() => changeThemeMode(false)}>
                                             <div className='icon'>
                                                 <FontAwesomeIcon icon={faSun} />
                                             </div>
-                                        </a>
+                                        </button>
                                         :
-                                        <a id="changeMode" onClick={() => changeThemeMode(true)}>
+                                        <button data-testid="changeMode" onClick={() => changeThemeMode(true)}>
                                             <div className='icon'>
                                                 <FontAwesomeIcon icon={faMoon} />
                                             </div>
-                                        </a>
+                                        </button>
                                 }
 
                             </li>
@@ -242,19 +144,19 @@ function NavegatorComponent({ preference, translationLiteral, changeLang, change
                     openLang &&
                     <ul className='absolute lang gap-1 py-2 '>
                         <li>
-                            <a className={`font-normal ${preference?.lang == 'en' ? '--active' : ''}`} onClick={() => selectLang('en')}>
+                            <button className={`font-normal ${preference?.lang == 'en' ? '--active' : ''}`} onClick={() => selectLang('en')}>
                                 EN (Enlgish)
-                            </a>
+                            </button>
                         </li>
                         <li>
-                            <a className={`font-normal ${preference?.lang == 'es' ? '--active' : ''}`} onClick={() => selectLang('es')}>
+                            <button className={`font-normal ${preference?.lang == 'es' ? '--active' : ''}`} onClick={() => selectLang('es')}>
                                 ES (Español)
-                            </a>
+                            </button>
                         </li>
                     </ul>
                 }
             </div>
-            <div onClick={toggleMenu} className={`top-0 bg-opacity-50 bg-black z-10 fixed h-screen w-full lg:hidden ${openMenu?'block':'hidden'}`} >
+            <div onTouchStart={toggleMenu} className={`top-0 bg-opacity-50 bg-black z-10 fixed h-screen w-full lg:hidden ${openMenu?'block':'hidden'}`} >
                 
             </div>
         </>
