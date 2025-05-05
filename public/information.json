@@ -178,7 +178,7 @@
                 {
                     "id": 0,
                     "title": "Javascript",
-                    "year": 4,
+                    "year": 5,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/javascript.png"
@@ -202,7 +202,7 @@
                 {
                     "id": 4,
                     "title": "C#",
-                    "year": 4,
+                    "year": 5,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/csharp.png"
@@ -248,7 +248,7 @@
                 {
                     "id": 9,
                     "title": "Html5",
-                    "year": 4,
+                    "year": 5,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/html.webp"
@@ -256,7 +256,7 @@
                 {
                     "id": 10,
                     "title": "CSS",
-                    "year": 4,
+                    "year": 5,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/css.svg"
@@ -472,7 +472,7 @@
                 {
                     "id": 34,
                     "title": "Node.js",
-                    "year": 2,
+                    "year": 3,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/nodejs.svg"
