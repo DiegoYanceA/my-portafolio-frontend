@@ -8,7 +8,7 @@ import { usePaginator } from "../../../../hooks/usePaginator";
 
 function TableComponent({ skills, trans, categories }: Readonly<SkillsTableProps>) {
     const min = 0;
-    const max = 3;
+    const max = 4;
     const data = useMemo<Array<StackTable>>(initData, [skills]);
 
     const {

@@ -6,16 +6,18 @@ export function usePaginator(data: Array<StackTable>) {
     const [rowsPerPage, setRowsPerPage] = useState(10);
 
     const startIndex = (currentPage - 1) * rowsPerPage;
+    
     const endIndex = startIndex + rowsPerPage;
 
     const currentData = useMemo(() => data.slice(startIndex, endIndex), [data, startIndex, endIndex]);
     
     const totalPages = useMemo(() => Math.ceil(data.length / rowsPerPage), [data]);
+    const totalPagesRef = useRef(totalPages);
 
     const swiperRef = useRef<HTMLTableSectionElement | null>(null);
 
     function changePage(page: number) {
-        if (page >= 1 && page <= totalPages) {
+        if (page >= 1 && page <= totalPages) { 
             setCurrentPage(page);
         }
     };
@@ -53,7 +55,8 @@ export function usePaginator(data: Array<StackTable>) {
                     })
                 } else {
                     setCurrentPage(c => {
-                        if (c + 1 <= totalPages) {
+                        
+                        if (c + 1 <= totalPagesRef.current) {
                             return c + 1;
                         }
                         return c;
@@ -86,11 +89,10 @@ export function usePaginator(data: Array<StackTable>) {
     }, []);
 
     useEffect(() => {
-        if (currentPage > totalPages) {
-            setCurrentPage(totalPages);
-        } else if(totalPages == 0){
+        if (currentPage > totalPages || totalPages == 0) {
             setCurrentPage(1);
         }
+        totalPagesRef.current = totalPages;
     }, [data])
 
     return {
