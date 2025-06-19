@@ -192,52 +192,12 @@
                     "logo": "./technology/ts.png"
                 },
                 {
-                    "id": 3,
-                    "title": "PHP",
-                    "year": 2,
-                    "month": 0,
-                    "experience": true,
-                    "logo": "./technology/php.png"
-                },
-                {
                     "id": 4,
                     "title": "C#",
                     "year": 5,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/csharp.png"
-                },
-                {
-                    "id": 5,
-                    "title": "Go",
-                    "year": 1,
-                    "month": 0,
-                    "experience": false,
-                    "logo": "./technology/go.png"
-                },
-                {
-                    "id": 6,
-                    "title": "C++",
-                    "year": 1,
-                    "month": 0,
-                    "experience": false,
-                    "logo": "./technology/c++.png"
-                },
-                {
-                    "id": 7,
-                    "title": "Java",
-                    "year": 1,
-                    "month": 0,
-                    "experience": true,
-                    "logo": "./technology/java.png"
-                },
-                {
-                    "id": 8,
-                    "title": "Python",
-                    "year": 1,
-                    "month": 0,
-                    "experience": false,
-                    "logo": "./technology/python.webp"
                 }
             ]
         },
@@ -286,36 +246,12 @@
                     "logo": "./technology/react.png"
                 },
                 {
-                    "id": 14,
-                    "title": "Vue.js",
-                    "year": 1,
-                    "month": 0,
-                    "experience": true,
-                    "logo": "./technology/vuejs.png"
-                },
-                {
-                    "id": 15,
-                    "title": "Tailwind",
-                    "year": 1,
-                    "month": 0,
-                    "experience": false,
-                    "logo": "./technology/tailwind.png"
-                },
-                {
                     "id": 16,
                     "title": "Bootstrap 3 y 4",
                     "year": 4,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/bootstrap.png"
-                },
-                {
-                    "id": 17,
-                    "title": "JQuery",
-                    "year": 3,
-                    "month": 0,
-                    "experience": true,
-                    "logo": "./technology/jquery.png"
                 }
             ]
         },
@@ -323,14 +259,6 @@
             "id": 3,
             "title": "Backend",
             "stacks": [
-                {
-                    "id": 18,
-                    "title": "Express.js",
-                    "year": 1,
-                    "month": 0,
-                    "experience": true,
-                    "logo": "./technology/express.png"
-                },
                 {
                     "id": 19,
                     "title": "ASP.NET",
@@ -341,35 +269,11 @@
                 },
                 {
                     "id": 20,
-                    "title": ".Net Core 8",
+                    "title": ".Net Core",
                     "year": 3,
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/netcore.png"
-                },
-                {
-                    "id": 21,
-                    "title": "Laravel",
-                    "year": 1,
-                    "month": 0,
-                    "experience": true,
-                    "logo": "./technology/laravel.png"
-                },
-                {
-                    "id": 22,
-                    "title": "CodeIgniter",
-                    "year": 1,
-                    "month": 0,
-                    "experience": true,
-                    "logo": "./technology/codeigniter.svg"
-                },
-                {
-                    "id": 23,
-                    "title": "Phalcon",
-                    "year": 1,
-                    "month": 0,
-                    "experience": true,
-                    "logo": "./technology/phalcon.png"
                 }
             ]
         },
@@ -392,14 +296,6 @@
                     "month": 0,
                     "experience": true,
                     "logo": "./technology/postgres.png"
-                },
-                {
-                    "id": 26,
-                    "title": "MongoDB",
-                    "year": 1,
-                    "month": 0,
-                    "experience": true,
-                    "logo": "./technology/mongo.png"
                 },
                 {
                     "id": 27,
@@ -460,22 +356,6 @@
                     "month": 0,
                     "experience": false,
                     "logo": "./technology/vuforia.png"
-                },
-                {
-                    "id": 33,
-                    "title": "GraphQL",
-                    "year": 1,
-                    "month": 0,
-                    "experience": false,
-                    "logo": "./technology/graphql.png"
-                },
-                {
-                    "id": 34,
-                    "title": "Node.js",
-                    "year": 3,
-                    "month": 0,
-                    "experience": true,
-                    "logo": "./technology/nodejs.svg"
                 },
                 {
                     "id": 35,
